@@ -1,0 +1,239 @@
+.headlogo img
+{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 13px;
+
+}
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Arial,Helvetica, sans-serif;
+}
+
+#navbar
+{
+    display: flex;
+
+}
+
+#mainInput
+{
+    margin-left: 34%;
+    width: 450px;
+    height: 26px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border-color: yellow;
+}
+
+#searchBox
+{
+    display: flex;
+}
+
+#banner
+{
+    width: 1190px;
+    height: 420px;
+    border: 1px solid yellowgreen;
+    margin-top: 25px; 
+    margin-left: 75px;
+}
+
+.photos
+{
+    display: flex;
+    margin-top: 15px;
+    width: 1190px;
+    height: 130px;
+    border: 1px solid teal;
+    margin-left: 70px;
+    gap: 8px;
+
+
+}
+
+.photos>div
+{
+   border: 1px solid red;
+   display: flex;
+}
+
+#collection
+{
+    display: flex;
+    margin-top: 15px;
+    width: 1190px;
+    height: 300px;
+    border: 1px solid teal;
+    margin-left: 65px;
+    gap: 8px;
+
+}
+
+#collection>div
+{
+    text-align: center;
+    border: 1px solid teal;
+}
+
+.cIMG
+{
+     width: 240px;
+}
+
+#superdeals
+{
+    display: flex;
+    margin-top: 15px;
+    width: 1190px;
+    height: 340px;
+    border: 1px solid teal;
+    margin-left: 65px;
+    gap: 8px;
+
+}
+
+#superdeals>div
+{
+    text-align: center;
+    border: 1px solid teal;
+}
+
+#collection h3
+{
+    font-family: Helvetica,sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.popularSearches
+{
+    margin-top: 50px;
+    margin-left: 60px;
+   
+}
+
+.popularSearches>div
+{
+    gap: 40px;
+}
+
+.popularSearches a
+{
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    
+
+}
+
+.popularSearches a:hover
+{
+    color: rgb(33, 95, 95);
+}
+
+#abovefooter
+{
+    border: 1px solid red;
+    height: 120px;
+    margin-top: 40px;
+    display: flex;
+    width: 1200px;
+    margin-left: 50px;
+    background-color: #FFFFFF;
+}
+
+#abovefooter>div
+{
+    width: 250px;
+    border: 1px solid teal;
+}
+
+#footimg
+{
+    width: 200px;
+    margin: 3px 0px;
+    height: 44px;
+    font :14px;
+}
+
+#footH3
+{
+    color: #000000;
+    width: 233px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#newSletter
+{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+#newSletter h4
+{
+    color: #666666;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#newSletter input
+{
+    width: 300px;
+    height: 40px;
+    padding: 3px 6px;
+    color: #FFFFFF;
+}
+
+#newSletter button
+{
+    width: 121px;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+#newSletter button:hover
+{
+   background-color:  gray;
+   cursor: pointer;
+}
+
+#newSletter img
+{
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+    
+}
+
+#lastimg
+{
+    margin-left: 200px;
+}
+
+#newSletter>div
+{
+    display: flex;
+}
+.social
+{
+    gap: 10px;
+}
