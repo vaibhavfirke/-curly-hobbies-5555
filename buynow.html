@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #selected_p {
+            border: 2px solid black;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(auto, auto);
+            gap: 10px;
+
+        }
+
+        #selected_p>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            border: 2px solid red;
+        }
+
+        #selected_p>div>img {
+            width: 100%;
+        }
+
+        #selected_p>div>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            border: 2px solid black;
+            gap: 20px;
+        }
+
+        button {
+            border: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="selected_p"></div>
+</body>
+
+</html>
+<script>
+    let arr =[]
+    let selected_p = document.getElementById('selected_p');
+    
+   let addtocart_items = JSON.parse(localStorage.getItem("add_to_cart"))||[];
+    function append_p(array,container){
+     container.innerHTML=null;
+     array.forEach(function(ele){
+       let divimg = document.createElement("div");
+       divimg.style.width="30%";
+       let divdtl = document.createElement("div");
+       divdtl.style.width="70%";
+       let btnq = document.createElement("div");
+       let image = document.createElement("img"); 
+       let desc = document.createElement("p");
+       let title = document.createElement("p"); 
+       let brand = document.createElement("p"); 
+       let price = document.createElement("p");
+       let quantity = document.createElement("p"); 
+       let increment = document.createElement("button");
+       let decrement = document.createElement("button");
+       let addtocart = document.createElement("button"); 
+       let buynow = document.createElement("button"); 
+          increment.innerText=">";
+          decrement.innerText="<";
+          addtocart.innerText="add to cart";
+          buynow.innerText= "but now";
+          increment.addEventListener('click',function(){
+            quantity.innerText = ele.quantity++;
+          })
+          decrement.addEventListener('click', function () {
+             quantity.innerText = ele.quantity--;
+         })
+         addtocart.addEventListener('click', function(){
+             addtocartfun(ele);
+         });
+        title.innerText = ele.title;
+        image.src = ele.image;
+        desc.innerText= ele.desc;
+         quantity.innerText= ele.quantity;
+         price.innerText = ele.price;
+         divimg.append(image);
+         btnq.append(increment,quantity,decrement)
+         divdtl.append(title,price,desc,btnq,addtocart,buynow)
+         container.append(divimg,divdtl);
+     });
+    }
+     let desc ='New Smart Watch Men Full Touch Screen Sport Fitness Watch IP67 Waterproof Bluetooth For Android ios smartwatch Men+box - Black';
+     let img = 'https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16445/goods_thumb-v1/af8dc4077d50.jpg';
+    function porduct_obj(title,price,image,desc,quantity){
+        this.desc = desc;
+        this.title = title;
+        this.price = price;
+        this.quantity=quantity;
+        this.image= image;
+    }
+      let obj = new porduct_obj("watch,",222,img,desc,2);
+      arr.push(obj);
+      console.log(arr)
+      append_p(arr,selected_p);
+      function addtocartfun(ele){
+        let otheranme = JSON.parse(localStorage.getItem("add_to_cart"))||[];
+        otheranme.push(ele);
+        localStorage.setItem("add_to_cart",JSON.stringify(otheranme));
+       console.log(addtocart_items)
+      }
+</script>
