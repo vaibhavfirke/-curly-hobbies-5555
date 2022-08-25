@@ -1,0 +1,430 @@
+.headlogo img
+{
+    width: 230px;
+    height: 50px;
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 13px;
+
+}
+
+a
+{
+    text-decoration: none;
+}
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Arial,Helvetica, sans-serif;
+}
+
+#navbar
+{
+    display: flex;
+
+}
+
+#mainInput
+{
+    margin-left: 34%;
+    width: 450px;
+    height: 26px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border-color: yellow;
+}
+
+#searchBox
+{
+    display: flex;
+}
+
+#user
+{
+    margin-left: 30px;
+    margin-top: 22px;
+}
+
+#searchBox a
+{
+    display: flex;
+}
+
+#favorites
+{
+    margin-left: 50px;
+    margin-top: 22px;
+}
+
+#cart
+{
+    margin-left: 50px;
+    margin-top: 22px;
+}
+
+
+#userH
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 4px;
+    color: #666666;
+}
+
+#userF
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 4px;
+    color: #666666;
+}
+
+#userC
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 4px;
+    color: #666666;
+}
+
+#banner
+{
+    width: 1190px;
+    height: 420px;
+    border: 1px solid yellowgreen;
+    margin-top: 25px; 
+    margin-left: 75px;
+    
+   
+}
+
+#bannerA 
+{
+    display: flex;
+    gap: 150px;
+}
+
+.head1
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+#bannerA a
+{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    gap: 40px;
+}
+
+#bannerA2 a
+{
+    font-size: 16px;
+    color: #000000;
+}
+
+#bannerA2
+{
+    display: flex;
+    gap: 60px;
+    margin-top: 10px;
+    background-color: yellow ;
+    width: 70%;
+    height: 60px;
+    text-align: center;
+    background-color: #FFDA00;
+    color: #666666;
+}
+
+#bannerA2 h3:hover
+{
+    text-decoration: underline;
+}
+
+#bannerIMG
+{
+    width: 950px;
+    margin-left: 250px;
+    margin-top: 0px;
+}
+
+.photos
+{
+    display: flex;
+    margin-top: 30px;
+    width: 1190px;
+    height: 130px;
+    margin-left: 70px;
+    gap: 8px;
+
+
+}
+
+.photos>div
+{
+   display: flex;
+}
+
+#icon 
+{
+    display: flex;
+}
+
+#fafa
+{
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+#iconh1
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#collection
+{
+    display: flex;
+    margin-top: 15px;
+    width: 1190px;
+    height: 300px;
+    margin-left: 60px;
+    gap: 8px;
+
+}
+
+#collection>div
+{
+    text-align: center;
+    border: 1px solid rgb(252, 233, 233);
+}
+
+#collection div:hover
+{
+    border-color: #dacdcd;
+    
+}
+
+.cIMG, .sIMG
+{
+     width: 240px;
+}
+
+.ssIMG
+{
+    width: 350px ;
+}
+
+.HP
+{
+    background-color: #000000B3 ;
+    height: 100px;
+    color: #FFFFFF;
+}
+
+#superdeals
+{
+    display: flex;
+    margin-top: 15px;
+    width: 1190px;
+    height: 350px;
+    margin-left: 60px;
+    gap: 8px;
+
+}
+
+#superdeals div:hover
+{
+    animation: backwards;
+}
+
+#SP
+{
+    text-decoration: line-through;
+}
+
+#Sprice
+{
+    color: red;
+}
+
+#flashsale
+{
+    background-color: #FFEDF1;
+    color: #F30240;
+}
+
+#superdeals>div
+{
+    text-align: center;
+    border: 1px solid rgb(223, 228, 228);
+}
+
+
+
+#collection p
+{
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#superdeals p
+{
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+
+@keyframes image 
+    {
+        0%{transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)}
+        25%{transform: translate3d(0px, 0px, 0px) scale3d(0.782535, 0.782535, 0.782535) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)}
+        50%{transform: translate3d(0px, 0px, 0px) scale3d(0.99625, 0.99625, 0.99625) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);}
+        75%{transform: translate3d(0px, 0px, 0px) scale3d(0.859321, 0.859321, 0.859321) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);}
+        100%{transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);}
+    }
+
+
+
+
+
+
+.popularSearches
+{
+    margin-top: 50px;
+    margin-left: 60px;
+   
+}
+
+.popularSearches>div
+{
+    gap: 40px;
+}
+
+.popularSearches a
+{
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    
+
+}
+
+.popularSearches a:hover
+{
+    color: rgb(33, 95, 95);
+}
+
+#abovefooter
+{
+    border: 1px solid red;
+    height: 120px;
+    margin-top: 40px;
+    display: flex;
+    width: 1200px;
+    margin-left: 50px;
+    background-color: #FFFFFF;
+}
+
+#abovefooter>div
+{
+    width: 250px;
+    border: 1px solid teal;
+}
+
+#footimg
+{
+    width: 200px;
+    margin: 3px 0px;
+    height: 44px;
+    font :14px;
+}
+
+#footH3
+{
+    color: #000000;
+    width: 233px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#newSletter
+{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+#newSletter h4
+{
+    color: #666666;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#newSletter input
+{
+    width: 300px;
+    height: 40px;
+    padding: 3px 6px;
+    color: #FFFFFF;
+}
+
+#newSletter button
+{
+    width: 121px;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+#newSletter button:hover
+{
+   background-color:  gray;
+   cursor: pointer;
+}
+
+#newSletter img
+{
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+    
+}
+
+#lastimg
+{
+    margin-left: 200px;
+}
+
+#newSletter>div
+{
+    display: flex;
+}
+.social
+{
+    gap: 10px;
+}
+
+/* #lastimg:hover
+{
+    background-color: rgb(28, 28, 179);
+    cursor: pointer;
+} */
+
+.social img:hover
+{
+    cursor: pointer;
+    border-color: red;
+    color: red;
+}
