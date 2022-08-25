@@ -71,10 +71,11 @@ document.getElementById("VsigButton").addEventListener("click", function () {
 function checkusernameAndpassword(email, pass) {
   let user2 = JSON.parse(localStorage.getItem("userinfo"));
 let temp=false;
-  user2.map((elem) => {
+  user2.forEach((elem) => {
     console.log("uesr", elem.Email,elem.Password);
     console.log("info",email,pass)
     if (elem.Email == email && elem.Password == pass) {
+      localStorage.setItem("login_info",JSON.stringify(elem));
      temp=true;
     
     }
