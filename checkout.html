@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #shoping_info{
+        border: 2px solid black;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,60% 30%);
+        grid-template-rows: repeat(auto,auto);
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+       #shoping_info>:first-child{
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 1%;
+      }
+        #shoping_info>:first-child>p{
+            border: 2px solid red;
+            width: 100%;
+            padding: 1%;
+            word-wrap: break-word;
+        }
+       #shoping_info>:last-child{
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 1%;
+      }
+    </style>
+</head>
+<body>
+    <div id="shoping_info"></div>
+</body>
+</html>
+<script>
+    let oder = JSON.parse(localStorage.getItem('oder'))||[];
+    console.log(oder);
+   let container = document.getElementById("shoping_info");
+    window.onload= append_shoping_info(oder,container);
+    // address1: ""
+    // address2: ""
+    // check: "on"
+    // city: ""
+    // email: ""
+    // fname: ""
+    // lname: ""
+    // number: ""
+    // state: "mp"
+    // zipcode: ""
+   function append_shoping_info(array,container){
+       container.innerHTML=null;
+       array.forEach(function({fname,lname,number,email,address1,address2,city,state,zipcode}){
+         let div_address=document.createElement('div');
+         let divbtn = document.createElement("div");
+         let new_address_btn = document.createElement("button");
+         let hading = document.createElement('h3');
+         let fullname =document.createElement("p");
+         let fulladdress = document.createElement("p");
+         let  contacts = document.createElement("p");
+         fullname.innerText= `${fname} ${lname}`;
+         if(address2==""){
+             fulladdress.innerText= `${address1} ${city,state,zipcode}`;
+
+         }else{
+         fulladdress.innerText = `${address2} ${city, state, zipcode}`;
+
+         }
+         contacts.innerText= ` ${email} ${number}`;
+         hading.innerText= "Select other address";
+         new_address_btn.innerText= "Add New Address";
+         new_address_btn.addEventListener('click',function(){
+         });
+          
+         div_address.append(fullname,contacts,fulladdress);
+         divbtn.append(hading,new_address_btn);
+         container.append(div_address,divbtn);
+       });
+   }
+</script>

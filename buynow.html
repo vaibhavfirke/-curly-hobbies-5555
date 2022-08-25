@@ -7,116 +7,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #selected_p {
-            border: 2px solid black;
-            width: 100%;
+        #address_h {
+            border: 2px solid blue;
             margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(auto, auto);
-            gap: 10px;
-
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
 
-        #selected_p>div {
+        #detail_of_order {
+            margin: auto;
+            width:60%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            gap: 10px;
+        }
+
+        #form{
+            width: 100%;
+            border: 2px solid blue;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             align-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+          #form>span,p{
+            width: 60%;
+          }
+           #form>p{
             border: 2px solid red;
-        }
-
-        #selected_p>div>img {
-            width: 100%;
-        }
-
-        #selected_p>div>div {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+           }
+       #form>span{
+        width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border:  2px solid red;
+        }
+               #form>span>:first-child{
+                width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
             align-content: center;
             border: 2px solid black;
-            gap: 20px;
+            flex-wrap: wrap;
+            word-wrap: normal;
         }
-
-        button {
-            border: hidden;
-        }
+         #form>span>:last-child{
+            width: 40%;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            word-wrap: normal;
+         }
     </style>
 </head>
 
 <body>
+    <h1 id="address_h">Add New Add Address </h1>
+    <div id="detail_of_order">
+        <form id="form">
+            <span>
+                <p>frist name:</p><input id="fname" type="text" placeholder=" frist name ">
+            </span> 
+            <span>
 
-    <div id="selected_p"></div>
+              <p>last name : </p>   <input id="lname" type="text" placeholder="last name"> 
+            </span>
+            <span>
+
+              <p> Address line 1:</p>  <input id="line1" type="text"
+                    placeholder="street address, flat, suite, unit, building,floor,etc.">
+            </span>
+            <p>Note:please write your address in english</p>
+            <span>
+
+              <p> address line 2:</p>   <input id="line2" placeholder="optional" type="text">
+            </span>
+            <p>Note:please write your address in english</p>
+            <span>
+              <p> State?Region :</p>  <select id="state">
+                    <option disabled>State</option>
+                    <option value="mp">madhay pradesh</option>
+                    <option value="delhi">delhi</option>
+                    <option value="up">utter pradesh</option>
+                    <option value="mh">maharashtra</option>
+                    <option value="uk">uttra khand</option>
+                    <option value="rj">rajesthan</option>
+                </select>
+            </span>
+            <span>
+
+               <p>city: </p>  <input id="city" type="text" placeholder="city">
+            </span>
+            <span>
+
+             <p> Zip / postal Code</p> <input id="zip" type="number" placeholder="code"> 
+            </span>
+            <span>
+             <p>Phone number: </p>   <input id="number" type="tel" placeholder="number"> 
+
+            </span>
+            <span>
+
+             <p> E-mail Address:</p>   <input id="email" type="email" placeholder="Email">
+            </span>
+            <span>
+
+                <input id="check" type="checkbox">set as my default address</address></input>
+            </span>
+            <span>
+
+                <input id="submit" type="submit"></input>
+            </span>
+
+        </form>
+    </div>
 </body>
 
 </html>
 <script>
-    let arr =[]
-    let selected_p = document.getElementById('selected_p');
-    
-   let addtocart_items = JSON.parse(localStorage.getItem("add_to_cart"))||[];
-    function append_p(array,container){
-     container.innerHTML=null;
-     array.forEach(function(ele){
-       let divimg = document.createElement("div");
-       divimg.style.width="30%";
-       let divdtl = document.createElement("div");
-       divdtl.style.width="70%";
-       let btnq = document.createElement("div");
-       let image = document.createElement("img"); 
-       let desc = document.createElement("p");
-       let title = document.createElement("p"); 
-       let brand = document.createElement("p"); 
-       let price = document.createElement("p");
-       let quantity = document.createElement("p"); 
-       let increment = document.createElement("button");
-       let decrement = document.createElement("button");
-       let addtocart = document.createElement("button"); 
-       let buynow = document.createElement("button"); 
-          increment.innerText=">";
-          decrement.innerText="<";
-          addtocart.innerText="add to cart";
-          buynow.innerText= "but now";
-          increment.addEventListener('click',function(){
-            quantity.innerText = ele.quantity++;
-          })
-          decrement.addEventListener('click', function () {
-             quantity.innerText = ele.quantity--;
-         })
-         addtocart.addEventListener('click', function(){
-             addtocartfun(ele);
-         });
-        title.innerText = ele.title;
-        image.src = ele.image;
-        desc.innerText= ele.desc;
-         quantity.innerText= ele.quantity;
-         price.innerText = ele.price;
-         divimg.append(image);
-         btnq.append(increment,quantity,decrement)
-         divdtl.append(title,price,desc,btnq,addtocart,buynow)
-         container.append(divimg,divdtl);
-     });
+    user_oder_detail = JSON.parse(localStorage.getItem("oder")) || [];
+    document.getElementById("form").addEventListener("submit", sumbitform);
+    function sumbitform(event) {
+        event.preventDefault();
+        let form = document.getElementById('form');
+        let fname = form.fname.value;
+        let lname = form.lname.value;
+        let address1 = form.line1.value;
+        let address2 = form.line2.value;
+        let state = form.state.value;
+        let city = form.city.value;
+        let zipcode = form.zip.value;
+        let number = form.number.value;
+        let email = form.email.value;
+        let check = form.check.value;
+
+        let address = new Address(fname, lname, address1, address2, state, city, zipcode, number, email, check);
+        console.log(address)
+        // user_oder_detail.push(address);
+        let abc=[];
+        abc.push(address)
+        localStorage.setItem("oder", JSON.stringify(abc));
+        console.log(user_oder_detail)
+        window.location.href = "checkout.html";
+
+
     }
-     let desc ='New Smart Watch Men Full Touch Screen Sport Fitness Watch IP67 Waterproof Bluetooth For Android ios smartwatch Men+box - Black';
-     let img = 'https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16445/goods_thumb-v1/af8dc4077d50.jpg';
-    function porduct_obj(title,price,image,desc,quantity){
-        this.desc = desc;
-        this.title = title;
-        this.price = price;
-        this.quantity=quantity;
-        this.image= image;
+
+    class Address {
+        constructor(fname, lname, address1, address2, state, city, zipcode, number, email, check) {
+            this.fname = fname;
+            this.lname = lname;
+            this.address1 = address1;
+            this.address2 = address2;
+            this.state = state;
+            this.city = city;
+            this.zipcode = zipcode;
+            this.number = number;
+            this.email = email;
+            this.check = check;
+        }
     }
-      let obj = new porduct_obj("watch,",222,img,desc,2);
-      arr.push(obj);
-      console.log(arr)
-      append_p(arr,selected_p);
-      function addtocartfun(ele){
-        let otheranme = JSON.parse(localStorage.getItem("add_to_cart"))||[];
-        otheranme.push(ele);
-        localStorage.setItem("add_to_cart",JSON.stringify(otheranme));
-       console.log(addtocart_items)
-      }
+    console.log(user_oder_detail);
 </script>
