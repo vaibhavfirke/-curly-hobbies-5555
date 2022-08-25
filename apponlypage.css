@@ -6,58 +6,72 @@ body{
  grid-template-columns: repeat(5,1fr);
  grid-template-rows: auto;
  /* gap: 1px; */
- border: 1px solid blue;
+ /* border: 1px solid blue; */
  /* height: 1201px; */
  width: 1190px;
  margin: auto;
-margin-top: 200px;
+
 }
 .psdiv{
-    border: 1px solid red;
+    /* border: 1px solid; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     color: black;
     font-family: OpenSanse,Arial, Helvetica, sans-serif; 
     padding: 10px;
     width: 230px;
-    height: 435px;
-    /* margin: 0 2px 10px 0; */
+    height: 393px;
+    margin: 0 2px 10px 0;
     box-sizing: border-box;
-}
-.psdivimg{
-    border:1px solid green ;
+    background-color: #ffffff;
 }
 
 
-p{
- margin-left: 10px;
- line-height: 20px;
+
+.psdivtitle p{
+ 
+ text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: OpenSanse,Arial, Helvetica, sans-serif;
  
 }
+.psdivtitle p:hover{
+    color:#ff642d
+}
+p{
+
+ margin-left: 10px;
+ line-height: 20px;
+}
+
 #ps_Sortbydiv{
-     border: 1px solid;
     width: 1190px;
     margin: 0 auto;
-    font-size: 0;
+    margin-top: 250px;
     text-align: right;
     padding-top: 30px;
     padding-bottom: 20px;
-    /* background-color: #f2f2f2; */
+   
 }
 #ps_sortby{
-font-size: 14px;
+
 color: #000;
-display: inline-block;
-height: 20px;
-line-height: 20px;
-border: 1px solid;
+margin-left: 20px;
+font-size: 15px;
+font-family: OpenSanse,Arial, Helvetica, sans-serif;
+
 }
 a{
-    font-size: 14px;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif; 
+    font-size: 15px;
 color: #000;
-display: inline-block;
-height: 20px;
-line-height: 20px;
-border: 1px solid;
+text-decoration: none;
+margin-left: 15px;
+padding: 5px 15px;
+}
+a:hover{
+    background-color: #ffda00;
+    font-weight: bold;
 }
 img{
     width: 100%;
