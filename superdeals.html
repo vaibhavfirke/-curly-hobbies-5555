@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUPER DEALS</title>
+    <link rel="stylesheet" href="../-curly-hobbies-5555/styles/style.css" />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+      #containr_superdeals {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      #containr_superdeals > div {
+        width: 200px;
+        height: 400px;
+        box-shadow: 2px 2px 2px 2px gray;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* align-items: center; */
+        justify-content: space-between;
+      }
+      /* img {
+        width: 20px;
+        height: 20px;
+      } */
+      .product_crt_img {
+        width: 20px;
+        height: auto;
+      }
+      /* .cart_img {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-around;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="containr_superdeals"></div>
+    <div id="super_deals_footer"></div>
+  </body>
+</html>
+<script src="../-curly-hobbies-5555/superdeal.js" type="module"></script>

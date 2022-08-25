@@ -1,0 +1,114 @@
+* {
+    margin: 0%;
+    padding: 0%;
+
+    font-family: OpenSanse, Arial, Helvetica, sans-serif;
+  }
+  #footer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+
+    background-color: azure;
+  }
+  #upper_footer {
+    width: 80%;
+    margin: auto;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  .up_footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+  #middle_footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 20px;
+  }
+  .logo_image {
+    width: 40px;
+  }
+  .social_logo {
+    width: 30px;
+  }
+  #information_footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app_link {
+    display: flex;
+    gap: 10px;
+  }
+  #app_stor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #qr_code {
+    width: 80px;
+    height: 80px;
+  }
+  .app_down {
+    width: 150px;
+  }
+  #patners_footer {
+    width: 80%;
+    margin: auto;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #patners_footer img {
+    width: auto;
+    height: 30px;
+  }
+  #footer_end {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: azure;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+  }
+  #email_getpoint {
+    margin-right: -5px;
+    width: 250px;
+    height: 30px;
+  }
+  #getpoint_btn {
+    margin-left: -2px;
+    width: 90px;
+    height: 34px;
+    background-color: black;
+    color: antiquewhite;
+  }
+  p {
+    color: gray;
+    font-weight: lighter;
+    font-size: small;
+    margin-bottom: 4px;
+  }
+  h3 {
+    font-size: medium;
+    margin-bottom: 10px;
+  }
