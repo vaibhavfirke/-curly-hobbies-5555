@@ -150,7 +150,6 @@ hr {
     padding-left: 18px;
     padding-right: 19px;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 #VtableBody .Bleft {
@@ -218,6 +217,8 @@ hr {
     font-size: 25px;
     cursor: pointer;
     border: 1px solid;
+    border:1px solid  #9999b0;
+
 
 }
 
@@ -239,6 +240,7 @@ p>button{
     font-size: 16px;
     color: #39393d;
     cursor: pointer;
+    background-color: white;
 }
 .Bright>p:nth-child(3) {
     margin-top: 30px;
@@ -364,4 +366,21 @@ column-gap: 10px;}
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
+}
+#Accepet{
+    display: flex;
+    width: 89%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+#Accepet>p{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-right: 8px;
+}
+#Accepet>img{
+    margin-right: 8px;
 }
