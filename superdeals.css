@@ -1,12 +1,17 @@
 * {
     margin: 0%;
     padding: 0%;
+
   }
+ body{
+  background-color: rgb(241, 240, 240);
+ }
   #containr_superdeals {
     width: 90%;
     height: auto;
     margin: auto;
     margin-bottom: 50px;
+    background-color: rgb(241, 240, 240);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -17,7 +22,7 @@
     margin: auto;
     padding-top: 10px;
     cursor: pointer;
-    
+    background-color: white;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -25,13 +30,39 @@
     align-items: center;
     justify-content: space-between;
   }
-  #containr_superdeals > div > img {
+  #containr_superdeals > div:hover{
+    box-shadow: 0px 23px 15px -3px rgba(75, 69, 69, 0.1);
+  }
+
+  #containr_superdeals > div>div > img {
     width: 150px;
     height: 150px;
   }
   .product_crt_img {
     width: 20px;
     height: auto;
+  }
+  #sort_filter{
+    width: 500px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    display: flex;
+    border: 2px solid green;
+    align-items: center;
+    gap: 20px;
+    font-size: medium;
+  }
+  #sort_filter>label{
+    font-size: small;
+  }
+  #sort_filter>button{
+    background-color: transparent;
+    border: transparent;
+    padding:4px 4px 4px 4px ;
+  }
+  #sort_filter>button:hover{
+    background-color: yellow;
   }
 
 

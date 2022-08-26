@@ -233,15 +233,19 @@ let product = [
   },
 ];
 
-let cart_storage = JSON.parse(localStorage.getItem("cart_data")) || [];
+let superdeals_data = localStorage.setItem(
+  "superdeals_data",
+  JSON.stringify(product)
+);
 
-// let show_product_storage =
-//   JSON.parse(localStorage.getItem("show_dataLC")) || null;
+let cart_storage = JSON.parse(localStorage.getItem("cart_data")) || [];
+let container = document.getElementById("containr_superdeals");
 
 function appendproduct(product) {
+  container.innerHTML = null;
   product.forEach((element) => {
     let div = document.createElement("div");
-
+    let product_div = document.createElement("div");
     let Image = document.createElement("img");
 
     let title = document.createElement("h3");
@@ -270,13 +274,13 @@ function appendproduct(product) {
     title.innerText = element.title;
     price.innerText = `$ ${element.price}`;
     RRP.innerText = `RRP: $${element.RRP}`;
-
-    div.append(Image, title, price, RRP, box);
-    div.addEventListener("click", function () {
-      localStorage.setItem("show_dataLC", JSON.stringify(element));
+    product_div.append(Image, title, price, RRP);
+    div.append(product_div, box);
+    product_div.addEventListener("click", function () {
+      localStorage.setItem("buyNow", JSON.stringify(element));
       alert("about product");
     });
-    document.querySelector("#containr_superdeals").append(div);
+    container.append(div);
   });
 }
 appendproduct(product);
@@ -289,3 +293,18 @@ function addtocartfunction(id) {
   }
   return true;
 }
+
+let price_sort = document.createElement("button");
+price_sort.innerText = "price";
+document.getElementById("sort_filter").append(price_sort);
+price_sort.addEventListener("click", function () {
+  price_sortfun();
+  appendproduct(superdeals_data);
+});
+
+let price_sortfun = (superdeals_data) => {
+  console.log(superdeals_data);
+  event.preventDefault();
+
+  return superdeals_data.price - superdeals_data.price;
+};
