@@ -8,21 +8,26 @@
     <title>Document</title>
     <style>
         #address_h {
-            border: 2px solid blue;
+            /* border: 2px solid blue; */
             margin: auto;
-            width: 100%;
+            margin-left: 1%;
+            width: 30%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             align-content: center;
+            color: #000031;
+            font-size: 24px;
         }
 
         #detail_of_order {
             margin: auto;
-            width:60%;
-            border: 2px solid black;
+            margin-left: 1%;
+            margin-top: 2%;
+            width:50%;
+            /* border: 2px solid black; */
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -34,7 +39,7 @@
 
         #form{
             width: 100%;
-            border: 2px solid blue;
+            /* border: 2px solid blue; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,17 +47,20 @@
             align-content: center;
             flex-wrap: nowrap;
             gap: 10px;
+            color: #c9c8bc;
         }
           #form>span,p{
             width: 60%;
           }
            #form>p{
-            border: 2px solid red;
+            /* border: 2px solid gold; */
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             align-content: center;
+            color: #c9c8bc;
+            font-size: 13px;
            }
        #form>span{
         width: 100%;
@@ -63,22 +71,28 @@
             align-content: center;
             flex-wrap: wrap;
             gap: 10px;
-            border:  2px solid red;
+            color: #d1cde5;
+            /* border:  2px solid red; */
         }
                #form>span>:first-child{
-                width: 40%;
+                width: 25%;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: center;
             align-content: center;
-            border: 2px solid black;
+            /* border: 2px solid black; */
             flex-wrap: wrap;
             word-wrap: normal;
+            font-size: 14px;
+            
         }
+         
          #form>span>:last-child{
             width: 40%;
-            border: 2px solid red;
+            /* color: blue; */
+            height: 40px ;
+            /* border: 2px solid red; */
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -87,11 +101,32 @@
             text-align: center;
             flex-wrap: wrap;
             word-wrap: normal;
+            color: #c9c8bc;
+            border: 1px solid #eee;
+            
          }
+         #form>button{
+            border: hidden;
+            background-color: gold;
+            color: black;
+            box-sizing: content-box;
+            font-size:larger;
+            text-align: center;
+            padding: 10px;
+            
+         }
+         ::placeholder{
+    text-align: start;
+    color: #b7b5b7;
+         }
+          /* #form>span>:last-child>:first-child{
+            height: 100%;
+            color: blue;
+          } */
     </style>
 </head>
 
-<body>
+<body style="background-color: #ffffff;">
     <h1 id="address_h">Add New Add Address </h1>
     <div id="detail_of_order">
         <form id="form">
@@ -140,14 +175,11 @@
 
              <p> E-mail Address:</p>   <input id="email" type="email" placeholder="Email">
             </span>
-            <span>
-
-                <input id="check" type="checkbox">set as my default address</address></input>
-            </span>
-            <span>
-
-                <input id="submit" type="submit"></input>
-            </span>
+                <input name="abc" id="check" type="checkbox"></input>
+                <label for="abc"> set as my default address</label>
+                <!-- <input  id="submit" type="submit"></input> -->
+                <button  id="submit">submit</button>
+            
 
         </form>
     </div>

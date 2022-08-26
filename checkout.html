@@ -1,99 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      #shoping_info{
-        border: 2px solid black;
-        width: 80%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2,60% 30%);
-        grid-template-rows: repeat(auto,auto);
-        gap: 20px;
-        flex-wrap: wrap;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #shoping_info {
+      /* border: 2px solid black; */
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 60% 30%);
+      grid-template-rows: repeat(auto, auto);
+      gap: 5%;
+      flex-wrap: wrap;
+      border: 1px solid #e0e0e0;
+    }
+
+    #shoping_info>:first-child {
+      width: 100%;
+      /* border: 2px solid black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+      gap: 5px;
+      flex-wrap: wrap;
+      padding: 1%;
+    }
+
+    #shoping_info>:first-child>p {
+      /* border: 2px solid red; */
+      width: 70%;
+      padding: 1%;
+      word-wrap: break-word;
+
+    }
+
+    #shoping_info>:last-child {
+      width: 100%;
+      /* border: 2px solid black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      word-wrap: break-word;
+      padding: 1%;
+    }
+
+    #shoping_info>:last-child>h3 {
+      /* border: 2px solid green; */
+      width: 80%;
+      text-align: center;
+      padding: 3%;
+      font-size: 17px;
+      background-color: gold;
+      color: black;
+    }
+
+    #shoping_info>:last-child>button {
+      text-align: center;
+      box-sizing: content-box;
+      width: 80%;
+      padding: 3%;
+      font-size: 17px;
+      background-color: white;
+      color: black;
+
+
+    }
+
+    /* ------------------------------------------------------------------------------------------------- */
+    #ordered_p_detail {
+      /* border: 2px solid black; */
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 35% 55%);
+      grid-template-rows: repeat(auto, auto);
+      gap: 2%;
+      padding: 1%;
+      border: 1px solid #fff;
+      background-color: #fff;
+
+    }
+
+    #ordered_p_detail>:first-child {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      /* border: 2px solid red; */
+      padding: 1%;
+      flex-wrap: wrap;
+    }
+
+    #ordered_p_detail>:last-child {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+      /* border: 2px solid green; */
+      gap: 5px;
+      flex-wrap: wrap;
+      padding: 1%;
+
+    }
+
+    #ordered_p_detail>:last-child>p {
+      width: 90%;
+      font-size: 25px;
+      line-height: 35px;
+      padding: 1%;
+      /* border: 2px solid blue; */
+      word-wrap: break-word;
+      color: #9c9e9c;
+    }
+
+    #ordered_p_detail>:last-child>h3 {
+      width: 90%;
+      font-size: 25px;
+      line-height: 35px;
+      padding: 1%;
+      /* border: 2px solid green; */
+      word-wrap: break-word;
+    }
+
+    #ordered_p_detail:first-child>img {
+      width: 100%;
+      border: #B5BAC4;
+    }
+
+
+
+
+
+
+    #coupon {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      flex-direction: row;
+      grid-template-columns: repeat(2, 55% 30%);
+      grid-template-rows: repeat(auto,auto);
+      gap: 15%;
+      padding: 1%;
+      border: 1px solid #e0e0e0;
+      background-color: #f9f9f9;
+    }
+
+
+     /* #coupon {
+      width: 80%;
+      margin: auto;
+      border: 1px solid green;
+      display: flex;
+      
+    }
+#Cleft{
+  width:60%;
+  border: 2px solid blue;
+}
+#Cright{
+  width: 40%;
+  border: 2px solid green;
+} */
+    #coupon>:first-child {
+      width: 100%;
+      /* border: 2px solid blue; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: center;
+      gap: 5px;
+      padding: 1%;
+    }
+
+    #coupon>:first-child>div{
+      /* border: 2px solid green; */
+      width: 95%;
+      display: grid;
+      grid-template-columns: repeat(2, 65% 25%);
+      grid-template-rows: repeat(auto, auto);
+      gap: 7%;
+      flex-wrap: wrap;
+      word-wrap: break-word;
+    }
+      #coupon>:first-child>div>input{
+        padding: 5%;
+        border:1px #B5BAC4;
       }
-       #shoping_info>:first-child{
-        width: 100%;
-        border: 2px solid black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 1%;
+      #coupon>:first-child>div>button{
+        background-color: gold;
+        color: black;
+        box-sizing: content-box;
+      padding: 5%;
+      font-size: 17px;
       }
-        #shoping_info>:first-child>p{
-            border: 2px solid red;
-            width: 100%;
-            padding: 1%;
-            word-wrap: break-word;
-        }
-       #shoping_info>:last-child{
-        width: 100%;
-        border: 2px solid black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 1%;
-      }
-    </style>
+    #coupon>:last-child {
+      /* border: 2px solid crimson; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      word-wrap: break-word;
+      padding: 1%;
+    }
+    #coupon>:last-child>:first-child{
+         width: 90%;
+         height: 70%;
+      /* border: 2px solid black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: center;
+    
+    }
+     #coupon>:last-child>:last-child{
+      /* border: 2px solid black; */
+      width: 90%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      word-wrap: break-word;
+      flex-wrap: wrap;
+     }
+          #coupon>:last-child>:last-child>:first-child{
+            box-sizing: content-box;
+            background-color: gold;
+            color: black;
+            width: 92%;
+            height: fit-content;
+            font-size: 17px;
+            padding: 3%;
+          }
+     /* #coupon>:last-child>p{
+      border: 2px solid black;
+      
+     }
+     #coupon>:last-child>:last-child{
+      
+      
+     }
+         #desc_btn {
+      width: 10%;
+      margin: auto;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+      margin-left: 10%;
+      word-wrap: normal;
+      border: hidden;
+    }
+
+    #desc_p {
+      margin: auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border: 2px solid red;
+      font-size: 50px;
+      gap: 20px;
+    }
+     */
+  </style>
 </head>
-<body>
-    <div id="shoping_info"></div>
+
+<body style="background-color: #f2f2f2;">
+  <div style="background-color: #ffffff;" id="shoping_info"></div>
+  <div style="background-color: #ffffff;" id="ordered_product"></div>
+  <div id="ordered_p_detail"></div>
+  <div style="background-color: #f9f9f9;" id="coupon">
+
+    <div id="Cleft">
+      <input  type="checkbox" name="apply_coupon">
+      <label for="apply_coupon"> Apply Coupon </label>
+      <div>
+        <input id="code" type="text" placeholder="Enter Coupon Code">
+        <button style="border: hidden;" id="apply">Apply</button>
+      </div>
+
+      <input type="checkbox" name="point">
+      <label for="point"> Use G points </label>
+      <p>every order you place with us is completely safe and secure</p>
+      <input type="checkbox" name="req">
+      <label for="req"> order Requirement : Dropshipping </label>
+    </div>
+
+    <div id="Cright">
+      <div>
+<p>item Sub-totle</p>
+<p>shoping Cost</p>
+<p id="totle"></p>
+<p>Grand Totle</p>
+      </div>
+       <div>
+
+         <button style="border: hidden;" id="place_order">Place order</button>
+       </div>
+    </div>
+  </div>
 </body>
+
 </html>
 <script>
-    let oder = JSON.parse(localStorage.getItem('oder'))||[];
-    console.log(oder);
-   let container = document.getElementById("shoping_info");
-    window.onload= append_shoping_info(oder,container);
-    // address1: ""
-    // address2: ""
-    // check: "on"
-    // city: ""
-    // email: ""
-    // fname: ""
-    // lname: ""
-    // number: ""
-    // state: "mp"
-    // zipcode: ""
-   function append_shoping_info(array,container){
-       container.innerHTML=null;
-       array.forEach(function({fname,lname,number,email,address1,address2,city,state,zipcode}){
-         let div_address=document.createElement('div');
-         let divbtn = document.createElement("div");
-         let new_address_btn = document.createElement("button");
-         let hading = document.createElement('h3');
-         let fullname =document.createElement("p");
-         let fulladdress = document.createElement("p");
-         let  contacts = document.createElement("p");
-         fullname.innerText= `${fname} ${lname}`;
-         if(address2==""){
-             fulladdress.innerText= `${address1} ${city,state,zipcode}`;
 
-         }else{
-         fulladdress.innerText = `${address2} ${city, state, zipcode}`;
+  let oder = JSON.parse(localStorage.getItem('oder')) || [];
+  //add to cart is dumy for now;
+  let selected_p = JSON.parse(localStorage.getItem("add_to_cart")) || [];
+  console.log(oder);
+  let container = document.getElementById("shoping_info");
+  let ordered_product = document.getElementById("ordered_product");
+  let ordered_p_detail = document.getElementById("ordered_p_detail");
 
-         }
-         contacts.innerText= ` ${email} ${number}`;
-         hading.innerText= "Select other address";
-         new_address_btn.innerText= "Add New Address";
-         new_address_btn.addEventListener('click',function(){
-         });
-          
-         div_address.append(fullname,contacts,fulladdress);
-         divbtn.append(hading,new_address_btn);
-         container.append(div_address,divbtn);
-       });
-   }
+  window.onload = append_shoping_info(oder, container);
+  
+  function append_shoping_info(array, container) {
+    container.innerHTML = null;
+    array.forEach(function ({ fname, lname, number, email, address1, address2, city, state, zipcode }) {
+      let div_address = document.createElement('div');
+      let divbtn = document.createElement("div");
+      let new_address_btn = document.createElement("button");
+      let hading = document.createElement('h3');
+      let fullname = document.createElement("p");
+      let fulladdress = document.createElement("p");
+      let contacts = document.createElement("p");
+      fullname.innerText = `${fname} ${lname}`;
+      if (address2 == "") {
+        fulladdress.innerText = `${address1} ${city, state, zipcode}`;
+
+      } else {
+        fulladdress.innerText = `${address2} ${city, state, zipcode}`;
+
+      }
+      contacts.innerText = ` ${email} ${number}`;
+      hading.innerText = "Select other address";
+      new_address_btn.innerText = "Add New Address";
+      new_address_btn.addEventListener('click', function () {
+      });
+
+      div_address.append(fullname, contacts, fulladdress);
+      divbtn.append(hading, new_address_btn);
+      container.append(div_address, divbtn);
+    });
+  }
+
+
+  //  -----------------------------------------------------------
+  window.addEventListener("load", function () {
+    append_p(selected_p, ordered_p_detail)
+  });
+
+  function append_p(array, container) {
+    container.innerHTML = null;
+    array.forEach(function (ele) {
+      let divimg = document.createElement("div");
+      // divimg.style.width = "30%";
+      let divdtl = document.createElement("div");
+      //divdtl.style.width = "70%";
+      let image = document.createElement("img");
+      let desc = document.createElement("p");
+      let title = document.createElement("h3");
+      let brand = document.createElement("p");
+      let price = document.createElement("p");
+      let quantity = document.createElement("p");
+      title.innerText = ele.title;
+      image.src = ele.image;
+      desc.innerText = ele.desc;
+      quantity.innerText = ele.quantity;
+      price.innerText = `price: ${ele.price}`;
+      divimg.append(image);
+      divdtl.append(title, price, desc);
+      container.append(divimg, divdtl);
+    });
+  }
+
+
 </script>
