@@ -166,6 +166,7 @@ let footer = () => {
       </div>
     </div>
     <div id="patners_footer">
+    <div>
       <img src="../-curly-hobbies-5555/gearbeast/company/a (1).webp" alt="" />
       <img src="../-curly-hobbies-5555/gearbeast/company/bo.webp" alt="" />
       <img src="../-curly-hobbies-5555/gearbeast/company/d.webp" alt="" />
@@ -193,6 +194,8 @@ let footer = () => {
         src="../-curly-hobbies-5555/gearbeast/company/postepay.webp"
         alt=""
       />
+      </div>
+      <div>
       <img src="../-curly-hobbies-5555/gearbeast/company/qiwi.webp" alt="" />
       <img src="../-curly-hobbies-5555/gearbeast/company/rese.webp" alt="" />
       <img
@@ -210,6 +213,7 @@ let footer = () => {
       />
       <img src="../-curly-hobbies-5555/gearbeast/company/ww.webp" alt="" />
       <img src="../-curly-hobbies-5555/gearbeast/company/ya.webp" alt="" />
+      </div
     </div>
   </div>
   <div id="footer_end">

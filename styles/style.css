@@ -8,7 +8,9 @@
     width: 100%;
     height: auto;
     margin: auto;
-
+    margin-bottom: 0%;
+    padding-top: 10px;
+    padding-bottom: 20px;
     background-color: azure;
   }
   #upper_footer {
@@ -67,13 +69,15 @@
   }
   #patners_footer {
     width: 80%;
+
     margin: auto;
 
     margin-top: 20px;
     margin-bottom: 20px;
     gap: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
     align-items: center;
   }
   #patners_footer img {
