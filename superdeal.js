@@ -1,5 +1,5 @@
 import footer from "../-curly-hobbies-5555/component/footer.js";
-console.log(footer());
+
 let super_deals_footer = document.getElementById("super_deals_footer");
 super_deals_footer.innerHTML = footer();
 
@@ -233,28 +233,25 @@ let product = [
   },
 ];
 
-// let data = product_data;
-// let containr_superdeals = document.getElementById("containr_superdeals");
-
 let cart_storage = JSON.parse(localStorage.getItem("cart_data")) || [];
+
+// let show_product_storage =
+//   JSON.parse(localStorage.getItem("show_dataLC")) || null;
 
 function appendproduct(product) {
   product.forEach((element) => {
     let div = document.createElement("div");
 
     let Image = document.createElement("img");
-    // Image.style.width = "200px";
+
     let title = document.createElement("h3");
     let price = document.createElement("h4");
     let RRP = document.createElement("p");
-
-    Image.src = element.image;
-    title.innerText = element.title;
-    price.innerText = `$ ${element.price}`;
-    RRP.innerText = `RRP: $${element.RRP}`;
-    let add_to_cart = document.createElement("button");
-    add_to_cart.innerText = "Add to cart";
-
+    let box = document.createElement("div");
+    let store = document.createElement("div");
+    store.innerHTML = ` <img src="https://uidesign.gbtcdn.com/GB/image/2019/20190417_9244/icon_store.png" alt="">`;
+    let add_to_cart = document.createElement("div");
+    add_to_cart.innerHTML = `<img src="https://uidesign.gbtcdn.com/GB/image/2019/20190417_9244/cart_default.png" alt="">`;
     add_to_cart.addEventListener("click", function () {
       if (addtocartfunction(element.id) === true) {
         alert("product added to cart");
@@ -264,8 +261,21 @@ function appendproduct(product) {
         alert("product is already present");
       }
     });
-    div.append(Image, title, price, RRP, add_to_cart);
+    box.append(store, add_to_cart);
+    box.style.width = "90%";
+    box.style.display = "flex";
+    box.style.alignItems = "center";
+    box.style.justifyContent = "space-between";
+    Image.src = element.image;
+    title.innerText = element.title;
+    price.innerText = `$ ${element.price}`;
+    RRP.innerText = `RRP: $${element.RRP}`;
 
+    div.append(Image, title, price, RRP, box);
+    div.addEventListener("click", function () {
+      localStorage.setItem("show_dataLC", JSON.stringify(element));
+      alert("about product");
+    });
     document.querySelector("#containr_superdeals").append(div);
   });
 }

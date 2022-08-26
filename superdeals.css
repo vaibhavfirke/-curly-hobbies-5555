@@ -1,0 +1,60 @@
+* {
+    margin: 0%;
+    padding: 0%;
+  }
+  #containr_superdeals {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  #containr_superdeals > div {
+    height: 380px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    margin: auto;
+    padding-top: 10px;
+    cursor: pointer;
+    
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #containr_superdeals > div > img {
+    width: 150px;
+    height: 150px;
+  }
+  .product_crt_img {
+    width: 20px;
+    height: auto;
+  }
+
+
+  @media (min-width: 400px) and (max-width: 720px) { 
+     #containr_superdeals {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+  #containr_superdeals > div {
+    height: 500px;
+    box-shadow: 2px 2px 2px 2px rgb(236, 226, 226);
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -6,50 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUPER DEALS</title>
     <link rel="stylesheet" href="../-curly-hobbies-5555/styles/style.css" />
-    <style>
-      * {
-        margin: 0%;
-        padding: 0%;
-      }
-      #containr_superdeals {
-        width: 90%;
-        height: auto;
-        margin: auto;
-        margin-bottom: 50px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
-      }
-      #containr_superdeals > div {
-        height: 380px;
-        box-shadow: 2px 2px 2px 2px rgb(236, 226, 226);
-        margin: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: space-between;
-      }
-      #containr_superdeals > div > img {
-        width: 200px;
-        height: 200px;
-      }
-      .product_crt_img {
-        width: 20px;
-        height: auto;
-      }
-      /* .cart_img {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: space-around;
-      } */
-    </style>
+    <link rel="stylesheet" href="../-curly-hobbies-5555/superdeals.css" />
   </head>
   <body>
+    <div id="sort_filter">
+      <button>High to low</button>
+      <button>Low to high</button>
+      <button>sort by name</button>
+    </div>
     <div id="containr_superdeals"></div>
     <div id="super_deals_footer"></div>
   </body>
