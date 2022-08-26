@@ -1,0 +1,158 @@
+
+.psnewfortodaydiv{
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 200px;
+}
+.psnewfortoday{
+    text-align: center;
+    margin: auto;
+    border :1px solid black;
+    text-align: center;
+    font-size: 28px;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif; 
+        color: #000;
+        font-weight: 700;
+       
+}
+
+.pslatestcoll{
+    height: 28px;
+    line-height: 28px;
+    color: #000;
+    font-weight: 700;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 16px;
+    margin-left: 3px;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif; 
+    border: 1px solid red;
+    margin-left: 160px;
+}
+
+/* ...................... */
+#psresultsdiv{
+    display: grid;
+ grid-template-columns: repeat(5,1fr);
+ grid-template-rows: auto;
+ 
+ width: 1190px;
+ margin: auto;
+ margin-top: 10px;
+ border: 1px solid teal;
+}
+#psalldiv{
+    width:1190px;
+    height:80px;
+    border: 1px solid;
+    margin: auto;
+}
+
+/* ............. */
+.psdiv{
+    /* border: 1px solid; */
+  
+    color: black;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif; 
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 0;
+    width: 230px;
+    padding: 11px 10px 7px;
+    margin-bottom: 30px;
+}
+
+
+.psdiv:hover{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.psdivtitle p{
+ 
+ text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: OpenSanse,Arial, Helvetica, sans-serif;
+ 
+}
+
+p{
+
+ margin-left: 10px;
+ line-height: 20px;
+}
+img{
+    width: 100%;
+}
+/* ........................ */
+#psanimationdiv{
+    /* border: 1px solid; */
+    width:1190px;
+    height:224px;
+    margin: auto;
+    margin-top: 10px;
+}
+#psanimationdiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    width: 1190px;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid teal;
+}
+
+#psanimationdiv img{
+    width: 50%;
+    /* border: 1px solid black; */
+    margin-top:10px ;
+    margin-left: 140px;
+}
+
+.psdivanimation{
+    height: 221px;
+    width: 293px;
+    border: 1px solid;
+    border-color: #eee
+}
+.psdivanimation:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.psdivtitleanimation p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif;
+    /* border:  1px solid navy */
+}
+.animationprice{
+    /* border: 1px solid red; */
+    width: 20%;
+    margin-top: -30px;
+}
+#animation{
+      border: 1px solid;
+}
+
+
+button{
+    margin-top: -120px;
+    margin-left: 155px;
+    position:absolute;
+    font-size: 20px;
+    height: 50px;
+    /* z-index: -1; */
+    background-color: rgba(77, 77, 77, 0.5);
+}
+
+button:nth-child(1){
+    /* position:absolute; */
+
+    left: -100px;
+}
+button:nth-child(2){
+    /* position:absolute; */
+    right: 163px;
+}
