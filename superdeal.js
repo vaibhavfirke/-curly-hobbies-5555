@@ -315,6 +315,7 @@ document
 
 superdeals_data = JSON.parse(localStorage.getItem("superdeals_data"));
 price_sort.onclick = () => {
+  price_sort.style.color = "gray";
   price_sortfun(superdeals_data);
 };
 
@@ -328,13 +329,16 @@ let price_sortfun = (superdeals_data) => {
 };
 
 superdeal_hottest.onclick = () => {
+  superdeal_hottest.style.color = "gray";
   appendproduct(product);
 };
 superdeal_newest.onclick = () => {
+  superdeal_newest.style.color = "gray";
   superdeal_newestfun(superdeals_data);
 };
 
 superdeal_discount.onclick = () => {
+  superdeal_discount.style.color = "gray";
   super_discountfun(superdeals_data);
 };
 

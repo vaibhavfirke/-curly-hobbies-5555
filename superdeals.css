@@ -6,6 +6,27 @@
  body{
   background-color: rgb(241, 240, 240);
  }
+ #flesh {
+  width: 100%;
+  height: 80px;
+  box-shadow: 2px 2px 2px 2px rgb(236, 226, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#flesh div {
+  display: flex;
+  padding: 2px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#flesh div:hover {
+  box-shadow: 2px 2px 2px 2px gray;
+}
+#flesh img {
+  width: 50px;
+}
   #containr_superdeals {
     width: 90%;
     height: auto;
@@ -73,12 +94,12 @@
 
   @media (min-width: 400px) and (max-width: 720px) { 
      #containr_superdeals {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: auto;
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
   #containr_superdeals > div {
