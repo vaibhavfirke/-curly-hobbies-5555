@@ -50,7 +50,7 @@ p{
 #ps_Sortbydiv{
     width: 1190px;
     margin: 0 auto;
-    margin-top: 250px;
+    /* margin-top: 250px; */
     text-align: right;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -64,7 +64,7 @@ font-size: 15px;
 font-family: OpenSanse,Arial, Helvetica, sans-serif;
 
 }
-a{
+#ps_Sortbydiv>a{
     font-family: OpenSanse,Arial, Helvetica, sans-serif; 
     font-size: 15px;
 color: #000;
@@ -72,10 +72,10 @@ text-decoration: none;
 margin-left: 15px;
 padding: 5px 15px;
 }
-a:hover{
+#ps_Sortbydiv>a:hover{
     background-color: #ffda00;
     font-weight: bold;
 }
-img{
+#results img{
     width: 100%;
 }

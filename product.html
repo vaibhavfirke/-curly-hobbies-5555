@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
     <style>
-        *{
-            font-family: OpenSanse,Arial, Helvetica, sans-serif;
+        * {
+            font-family: OpenSanse, Arial, Helvetica, sans-serif;
         }
+
         #selected_p {
             /* border: 2px solid black; */
             width: 80%;
@@ -52,7 +54,7 @@
             color: #000;
         }
 
-       
+
 
         #selected_p>:first-child>img {
             width: 100%;
@@ -69,24 +71,26 @@
             /* border: 2px solid black; */
             gap: 20px;
         }
-     #selected_p>:last-child>:nth-child(2){
-        /* border: 2px solid red; */
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: flex-start;
-        gap: 10%;
-        /* padding: 1%; */
-     }
-      #selected_p>:last-child>:nth-child(2)>:first-child{
+
+        #selected_p>:last-child>:nth-child(2) {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+            gap: 10%;
+            /* padding: 1%; */
+        }
+
+        #selected_p>:last-child>:nth-child(2)>:first-child {
             font-size: 17px;
             /* padding: 1%; */
-      }
-     
+        }
+
         #selected_p>:last-child>:nth-child(3)>button {
             border: 1px solid #ccc;
-            
+
             font-size: 17px;
             box-sizing: content-box;
             padding: 1%;
@@ -108,13 +112,13 @@
         /* border: 2px solid red; */
         /* box-sizing: content-box; */
         /* } */
-        #desc_btn{
+        #desc_btn {
             margin: auto;
             margin-left: 10%;
             box-sizing: content-box;
             font-size: 20px;
-            background-color:yellow;
-            color:#292600;
+            background-color: yellow;
+            color: #292600;
             border: hidden;
             padding: 10px;
         }
@@ -130,7 +134,7 @@
             align-content: center;
             /* border: 2px solid red; */
             gap: 20px;
-            color:#000000;
+            color: #000000;
             font-size: 17px;
             line-height: 35px;
         }
@@ -142,112 +146,139 @@
 <body style="background-color: #fff;">
 
     <div id="selected_p"></div>
-    <button onclick="show_detail(arr,desc_p)" id="desc_btn">show detail</button>
+    <button id="desc_btn">show detail</button>
     <div id="desc_p"></div>
+
+
+    <div id="buyFooter"></div>
 </body>
 
 </html>
-<script>
-    let arr = [];
+<script type="module">
+    import footer from "../component/footer.js";
+    let foot = document.getElementById("buyFooter");
+    foot.innerHTML = footer();
+
+    let arr = JSON.parse(localStorage.getItem("buyNow")) || [];
+
+    let but = document.getElementById("desc_btn").addEventListener("click", function () {
+        show_detail(arr, desc_p)
+    })
+
     let selected_p = document.getElementById('selected_p');
     let desc_p = document.getElementById("desc_p");
 
     let addtocart_items = JSON.parse(localStorage.getItem("add_to_cart")) || [];
-    function append_p(array, container) {
+    function append_p(ele, container) {
         container.innerHTML = null;
-        array.forEach(function (ele) {
-            let divimg = document.createElement("div");
-            // divimg.style.width = "30%";
-            let divdtl = document.createElement("div");
-            //divdtl.style.width = "70%";
-            let divbtns = document.createElement("div");
-            let btnq = document.createElement("div");
-            let div_price = document.createElement('div');
-            let span = document.createElement('h2');
-            span.innerText = ele.price;
-            span.style.color = "#f3198e";
-            let image = document.createElement("img");
-            let desc = document.createElement("p");
-            let title = document.createElement("h2");
-            let brand = document.createElement("p");
-            let price = document.createElement("p");
-            let quantity = document.createElement("p");
-            let increment = document.createElement("button");
-            let decrement = document.createElement("button");
-            let addtocart = document.createElement("button");
-            let buynow = document.createElement("button");
-            let qty = document.createElement("p");
-            qty.innerText = 'QTY';
-            increment.innerText = "+";
-            increment.style.background = "white";
-            decrement.innerText = "-";
-            decrement.style.background = "white";
-            addtocart.innerText = "add to cart";
-            addtocart.style.background = "#f30240";
-            addtocart.style.color = "white";
-            buynow.innerText = "buy now";
-            buynow.style.background = '#ffeff2';
-            buynow.style.color = "red";
-            increment.addEventListener('click', function () {
-                quantity.innerText = ele.quantity++;
-            })
-            decrement.addEventListener('click', function () {
-                quantity.innerText = ele.quantity;
-                if (ele.quantity > 1) {
-                    quantity.innerText = ele.quantity--;
-                }
+        // array.forEach(function (ele) {
+        let divimg = document.createElement("div");
+        // divimg.style.width = "30%";
+        let divdtl = document.createElement("div");
+        //divdtl.style.width = "70%";
+        let divbtns = document.createElement("div");
+        let btnq = document.createElement("div");
+        let div_price = document.createElement('div');
+        let span = document.createElement('h2');
+        span.innerText =` $ ${ele.price}`;
+        span.style.color = "#f3198e";
+        let image = document.createElement("img");
+        let desc = document.createElement("p");
+        let title = document.createElement("h2");
+        let brand = document.createElement("p");
+        let price = document.createElement("p");
+        let quantity = document.createElement("p");
+        let increment = document.createElement("button");
+        let decrement = document.createElement("button");
+        let addtocart = document.createElement("button");
+        let buynow = document.createElement("button");
+        let qty = document.createElement("p");
+        qty.innerText = 'QTY';
+        increment.innerText = "+";
+        increment.style.background = "white";
+        decrement.innerText = "-";
+        decrement.style.background = "white";
+        addtocart.innerText = "add to cart";
+        addtocart.style.background = "#f30240";
+        addtocart.style.color = "white";
+        buynow.innerText = "buy now";
+        buynow.style.background = '#ffeff2';
+        buynow.style.color = "red";
+        quantity.innerText =1;
+        let que=1;
+        increment.addEventListener('click', function () {
+            que++;
+            quantity.innerText = que;
 
-            })
-            addtocart.addEventListener('click', function () {
-                addtocartfun(ele);
-            });
-            buynow.addEventListener("click", function () {
-                window.location.href = "buynow.html";
-            });
-            title.innerText = ele.title;
-            image.src = ele.image;
-            desc.innerText = ele.desc;
-            // quantity.innerText = ele.quantity;
-            price.innerText = `price: `;
-            div_price.append(price,span);
-            divimg.append(image);
-            btnq.append(qty, decrement, quantity, increment)
-            divbtns.append(addtocart, buynow)
-            divdtl.append(title,div_price, btnq, divbtns)
-            container.append(divimg, divdtl);
+        })
+        decrement.addEventListener('click', function () {
+            quantity.innerText = ele.quantity;
+            if (que <=1) {
+                que=1;
+                quantity.innerText = que;
+            }else{
+
+                que--;
+                quantity.innerText = que;
+            }
+
+        })
+        ele.quantity=que;
+        addtocart.addEventListener('click', function () {
+
+            addtocartfun(ele);
         });
+        buynow.addEventListener("click", function () {
+            window.location.href = "buynow.html";
+        });
+        title.innerText = ele.title;
+        image.src = ele.img;
+        desc.innerText = ele.desc;
+        // quantity.innerText = ele.quantity;
+        price.innerText = `price: `;
+        div_price.append(price, span);
+        divimg.append(image);
+        btnq.append(qty, decrement, quantity, increment)
+        divbtns.append(addtocart, buynow)
+        divdtl.append(title, div_price, btnq, divbtns)
+        container.append(divimg, divdtl);
+        // });
     }
-    let desc = 'New Smart Watch Men Full Touch Screen Sport Fitness Watch IP67 Waterproof Bluetooth For Android ios smartwatch Men+box - Black';
-    let img = 'https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16445/goods_thumb-v1/af8dc4077d50.jpg';
-    function porduct_obj(title, price, image, desc, quantity) {
-        this.desc = desc;
-        this.title = title;
-        this.price = price;
-        this.quantity = quantity;
-        this.image = image;
-    }
-    let obj = new porduct_obj(desc, 222, img, desc, 2);
-    arr.push(obj);
-    console.log(arr);
+    // let desc = 'New Smart Watch Men Full Touch Screen Sport Fitness Watch IP67 Waterproof Bluetooth For Android ios smartwatch Men+box - Black';
+    // let img = 'https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16445/goods_thumb-v1/af8dc4077d50.jpg';
+    // function porduct_obj(title, price, image, desc, quantity) {
+    //     this.desc = desc;
+    //     this.title = title;
+    //     this.price = price;
+    //     this.quantity = quantity;
+    //     this.image = image;
+    // }
+    // let obj = new porduct_obj(desc, 222, img, desc, 2);
+    // arr.push(obj);
+    // console.log(arr);
 
     append_p(arr, selected_p);
+
     function addtocartfun(ele) {
+
         let otheranme = JSON.parse(localStorage.getItem("add_to_cart")) || [];
         let f = otheranme.filter(function (element) {
-            return element.image != ele.image;
+            return element.img != ele.img;
         });
-        otheranme = f;
+        // otheranme = f;
         otheranme.push(ele);
-        otheranme.push(ele);
+
         localStorage.setItem("add_to_cart", JSON.stringify(otheranme));
-        console.log(addtocart_items)
+        alert("Item Added To Cart");
+
+
     }
     function show_detail(array, container) {
-        container.innerHTML = null;
-        array.forEach(function ({ desc }) {
-            let detail = document.createElement('p');
-            detail.innerText = desc;
-            container.append(detail)
-        });
+
+        // array.forEach(function ({ desc }) {
+        let detail = document.createElement('p');
+        detail.innerText = array.title;
+        container.append(detail)
+        // });
     }
 </script>

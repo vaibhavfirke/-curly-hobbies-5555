@@ -1,4 +1,14 @@
-productData=[
+
+
+import navbar from "../component/navbar.js";
+let nav= document.getElementById("newNavbar");
+nav.innerHTML=navbar();
+
+import footer from "../component/footer.js";
+let foot= document.getElementById("newFooter");
+foot.innerHTML=footer(); 
+
+let productData=[
     {
     title: "Original Xiaomi MIJIA K Song Karaoke Microphone Bluetooth 5.1 Stereo Sound DSP Chip Noise Cancellation 2500mAh Handheld Microphones",
     price: 69.92,

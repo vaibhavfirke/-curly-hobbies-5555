@@ -2,7 +2,7 @@
 .psnewfortodaydiv{
     margin: auto;
     /* border: 1px solid red; */
-    margin-top: 200px;
+    margin-top: 50px;
 }
 .psnewfortoday{
     text-align: center;
@@ -26,7 +26,8 @@
     margin-bottom: 16px;
     margin-left: 3px;
     font-family: OpenSanse,Arial, Helvetica, sans-serif; 
-    margin-left: 160px;
+    margin-left: 90px;
+   
 }
 
 /* ...................... */
@@ -98,8 +99,10 @@ img{
     grid-template-rows: auto;
     width: 1190px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 25px;
     /* border: 1px solid teal; */
+    margin-bottom: 20px;
+    
 }
 
 #psanimationdiv img{

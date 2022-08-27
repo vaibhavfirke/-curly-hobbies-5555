@@ -6,13 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
   <style>
-    *{
-      font-family: OpenSanse,Arial, Helvetica, sans-serif;
+    * {
+      font-family: OpenSanse, Arial, Helvetica, sans-serif;
+      margin: 0%;
+      padding: 0%;
     }
+
     #shoping_info {
       /* border: 2px solid black; */
       width: 80%;
+      height: 150px;
       margin: auto;
       margin-top: 1%;
       display: grid;
@@ -20,7 +25,18 @@
       grid-template-rows: repeat(auto, auto);
       gap: 5%;
       flex-wrap: wrap;
-      border: 1px solid #9c9e9c;
+      /* border: 1px solid #9c9e9c; */
+    }
+
+    #shoping_info p {
+      margin-bottom: 10px;
+      margin-left: 20px;
+
+    }
+
+    #shoping_info p:first-child {
+      font-weight: bold;
+
     }
 
     #shoping_info>:first-child {
@@ -67,6 +83,7 @@
       font-size: 17px;
       background-color: gold;
       color: black;
+      margin-bottom: 10px;
     }
 
     #shoping_info>:last-child>button {
@@ -89,18 +106,18 @@
       margin: auto;
       margin-top: 1%;
 
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     align-content: center;
-     gap: 1%;
-      border: 1px solid #9c9e9c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 1%;
       background-color: #fff;
 
     }
-    #ordered_p_detail>div{
-       display: grid;
+
+    #ordered_p_detail>div {
+      display: grid;
       grid-template-columns: repeat(2, 13% 80%);
       grid-template-rows: repeat(auto, auto);
       gap: 1%;
@@ -141,11 +158,11 @@
     #ordered_p_detail>div>:last-child>div {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4,60% 10% 10% 10%);
-      grid-template-rows: repeat(auto,auto);
+      grid-template-columns: repeat(4, 60% 10% 10% 10%);
+      grid-template-rows: repeat(auto, auto);
       /* border: 2px solid blue; */
       gap: 5%;
-      
+
     }
 
 
@@ -248,25 +265,47 @@
       /* border: 2px solid black; */
       padding: 1%;
     }
-     #coupon>:last-child>div>p{
+
+    #coupon>:last-child>div>p {
       /* border: 1px solid blue; */
       font-size: 20px;
-     }
-     #coupon>:last-child>div>button{
+    }
+
+    #coupon>:last-child>div>button {
       box-sizing: content-box;
       font-size: 17px;
       background-color: gold;
       width: 95%;
       padding: 3%;
-     }
+    }
 
-   
+    #buynav {
+      width: 100%;
+      height: 90px;
+      margin-bottom: 25px;
+      background-color: white;
+      border: 1px solid;
+    }
 
-   
+    #buynav img {
+      width: 20%;
+      height: 40px;
+      margin-left: 5%;
+      margin-top: 20px;
+      object-fit: contain;
+    }
   </style>
 </head>
 
 <body style="background-color: #f2f2f2;">
+
+
+  <div id="buynav">
+    <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
+  </div>
+
+
+
   <div style="background-color: #ffffff;" id="shoping_info"></div>
   <div style="background-color: #ffffff;" id="ordered_product"></div>
   <div id="ordered_p_detail"></div>
@@ -290,31 +329,39 @@
     <div id="Cright">
 
       <div>
-        <p>item Sub-totle</p>
-        <p id="s_totle">item Sub-totle</p>
+        <p>Item Sub-Total</p>
+        <p id="S_total">0</p>
       </div>
 
       <div>
-        <p>shoping Cost</p>
-        <p id="s_cost">shoping Cost</p>
+        <p>Shopping Cost</p>
+        <p id="S2_total">0</p>
       </div>
       <div>
-        <p>Grand Totle</p>
-        <p id="g_totle">Grand Totle</p>
+        <p>Grand Total</p>
+        <p id="S3_total">0</p>
       </div>
 
 
       <div>
 
-        <button style="border: hidden;" id="place_order">Place order</button>
+        <button style="border: hidden;" id="place_order">Place Order</button>
       </div>
     </div>
   </div>
+  <div id="checkfooter"></div>
 </body>
 
 </html>
-<script>
-
+<script type="module">
+import footer from "../component/footer.js";
+let foot= document.getElementById("checkfooter");
+foot.innerHTML=footer();
+  
+let pay=document.getElementById("place_order");
+pay.addEventListener("click",function(){
+  window.location.href="payment.html";
+})
   let oder = JSON.parse(localStorage.getItem('oder')) || [];
   //add to cart is dumy for now;
   let selected_p = JSON.parse(localStorage.getItem("add_to_cart")) || [];
@@ -358,13 +405,16 @@
 
   //  -----------------------------------------------------------
   window.addEventListener("load", function () {
-    append_p(selected_p, ordered_p_detail)
+    let cart_data = JSON.parse(localStorage.getItem("add_to_cart"));
+    append_p(cart_data, ordered_p_detail)
   });
 
 
   ///new;
   function append_p(array, container) {
     container.innerHTML = null;
+
+    let grandtotal = 0;
     array.forEach(function (ele) {
       let each = document.createElement("div");
       let hading = document.createElement("div");
@@ -375,12 +425,8 @@
       let q = document.createElement("h3");
       q.innerText = 'Quantity';
       let ttl = document.createElement("h3");
-      ttl.innerText = "Totle";
+      ttl.innerText = "Total";
       hading.append(t, p, q, ttl);
-
-
-
-
 
       let divimg = document.createElement("div");
       // divimg.style.width = "30%";
@@ -397,16 +443,28 @@
       let qty = document.createElement("p");
       let price = document.createElement("p");
       title.innerText = ele.title;
-      image.src = ele.image;
+      image.src = ele.img;
       qty.innerText = ele.quantity;
-      price.innerText = ele.price;
-      totle.innerText = ele.quantity * ele.price;
+      price.innerText = `$ ${ele.price}`;
+      totle.innerText = ` $ ${ele.quantity * ele.price}`;
+      console.log(ele.quantity, ele.price)
+      grandtotal += (ele.quantity) * (ele.price);
+     
       divimg.append(image);
       div_price.append(title, price, qty, totle);
       divdtl.append(hading, div_price)
       each.append(divimg, divdtl);
       container.append(each);
     });
+
+    console.log(grandtotal);
+   document.getElementById("S_total").innerText=` $ ${grandtotal}`;
+   document.getElementById("S2_total").innerText=`$ ${grandtotal}`;
+   document.getElementById("S3_total").innerText=`$ ${grandtotal}`;
+   localStorage.setItem("grandtotal",grandtotal);
+
   }
+
+
 
 </script>

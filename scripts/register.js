@@ -118,3 +118,7 @@ function debounce(func,delay){
         func();
     },delay)
 }
+
+function home(){
+  window.location.href="index.html";
+}

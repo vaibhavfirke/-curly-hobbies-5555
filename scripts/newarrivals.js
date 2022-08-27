@@ -1,4 +1,12 @@
-Arrayofanimataion=[
+import navbar from "../component/navbar.js";
+let nav= document.getElementById("newarivalNavbar");
+nav.innerHTML=navbar();
+
+import footer from "../component/footer.js";
+let foot= document.getElementById("newarivalFoote");
+foot.innerHTML=footer(); 
+
+let Arrayofanimataion=[
     {
         title: "Tablet G18 GPS 8000mAh Google Play 8GB 128GB WIFI 10.1Inch Android 12 Laptop 48MP Deca Core 5G Pad Global Version PC",
         price: 278.00,
@@ -56,7 +64,7 @@ Arrayofanimataion=[
 
 ]
 
-psnewarrivaldata=[
+let psnewarrivaldata=[
     {
         title: "Tablet G18 GPS 8000mAh Google Play 8GB 128GB WIFI 10.1Inch Android 12 Laptop 48MP Deca Core 5G Pad Global Version PC",
         price: 278.00,
@@ -381,7 +389,7 @@ let append_data_animation=()=>{
 
 
 
-lightarray=[
+let lightarray=[
         
     {
         title: "Mini Torch USB Rechargeable Powerful LED Flashlight  for Night Hiking Camping Outdoor Light",
@@ -452,7 +460,7 @@ function light(){
 
 
 
-dataofcs=[
+let dataofcs=[
     {
         title: "Xiaomi Mi Smart WiFi Socket 2 Plug Bluetooth Gateway Version Remote Control adapter work Xiaomi Smart Home Mijia Mi home APP",
         price: 14.92,

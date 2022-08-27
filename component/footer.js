@@ -11,7 +11,7 @@ let footer = () => {
       <div class="up_footer">
         <img
           class="logo_image"
-          src="../-curly-hobbies-5555/gearbeast/logo/shop.png"
+          src="../gearbeast/logo/shop.png"
           alt=""
         />
         <h5>High Quaality Selection</h5>
@@ -20,7 +20,7 @@ let footer = () => {
       <div class="up_footer">
         <img
           class="logo_image"
-          src="../-curly-hobbies-5555/gearbeast/logo/price-down.png"
+          src="../gearbeast/logo/price-down.png"
           alt=""
         />
         <h5>Affordable Prices</h5>
@@ -29,7 +29,7 @@ let footer = () => {
       <div class="up_footer">
         <img
           class="logo_image"
-          src="../-curly-hobbies-5555/gearbeast/logo/delivery-truck.png"
+          src="../gearbeast/logo/delivery-truck.png"
           alt=""
         />
         <h5>Express Shipping</h5>
@@ -38,7 +38,7 @@ let footer = () => {
       <div class="up_footer">
         <img
           class="logo_image"
-          src="../-curly-hobbies-5555/gearbeast/logo/star.png"
+          src="../gearbeast/logo/star.png"
           alt=""
         />
         <h5>Worry-free After-sales</h5>
@@ -60,47 +60,47 @@ let footer = () => {
       <div id="socialmidia">
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/facebook (1).png"
+          src="../gearbeast/logo/facebook (1).png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/messenger (1).png"
+          src="../gearbeast/logo/messenger (1).png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/youtube.png"
+          src="../gearbeast/logo/youtube.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/pinterest.png"
+          src="../gearbeast/logo/pinterest.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/vk.png"
+          src="../gearbeast/logo/vk.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/instagram.png"
+          src="../gearbeast/logo/instagram.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/twitter.png"
+          src="../gearbeast/logo/twitter.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/blogger.png"
+          src="../gearbeast/logo/blogger.png"
           alt=""
         />
         <img
           class="social_logo"
-          src="../-curly-hobbies-5555/gearbeast/logo/tumblr.png"
+          src="../gearbeast/logo/tumblr.png"
           alt=""
         />
       </div>
@@ -147,18 +147,18 @@ let footer = () => {
         <div id="app_link">
           <img
             id="qr_code"
-            src="../-curly-hobbies-5555/gearbeast/logo/qr-code.png"
+            src="../gearbeast/logo/qr-code.png"
             alt=""
           />
           <div id="app_stor">
             <img
               class="app_down"
-              src="../-curly-hobbies-5555/gearbeast/logo/download.png"
+              src="../gearbeast/logo/download.png"
               alt=""
             />
             <img
               class="app_down"
-              src="../-curly-hobbies-5555/gearbeast/logo/download appstore.png"
+              src="../gearbeast/logo/download appstore.png"
               alt=""
             />
           </div>
@@ -167,52 +167,52 @@ let footer = () => {
     </div>
     <div id="patners_footer">
     <div>
-      <img src="../-curly-hobbies-5555/gearbeast/company/a (1).webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/bo.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/d.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/dic.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/eps.webp" alt="" />
+      <img src="../gearbeast/company/a (1).webp" alt="" />
+      <img src="../gearbeast/company/bo.webp" alt="" />
+      <img src="../gearbeast/company/d.webp" alt="" />
+      <img src="../gearbeast/company/dic.webp" alt="" />
+      <img src="../gearbeast/company/eps.webp" alt="" />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/giropay.webp"
+        src="../gearbeast/company/giropay.webp"
         alt=""
       />
-      <img src="../-curly-hobbies-5555/gearbeast/company/jcb.webp" alt="" />
+      <img src="../gearbeast/company/jcb.webp" alt="" />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/m-Logo.webp"
+        src="../gearbeast/company/m-Logo.webp"
         alt=""
       />
-      <img src="../-curly-hobbies-5555/gearbeast/company/m.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/money.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/oxxo.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/p.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/pago.webp" alt="" />
+      <img src="../gearbeast/company/m.webp" alt="" />
+      <img src="../gearbeast/company/money.webp" alt="" />
+      <img src="../gearbeast/company/oxxo.webp" alt="" />
+      <img src="../gearbeast/company/p.webp" alt="" />
+      <img src="../gearbeast/company/pago.webp" alt="" />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/paypal.webp"
+        src="../gearbeast/company/paypal.webp"
         alt=""
       />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/postepay.webp"
+        src="../gearbeast/company/postepay.webp"
         alt=""
       />
       </div>
       <div>
-      <img src="../-curly-hobbies-5555/gearbeast/company/qiwi.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/rese.webp" alt="" />
+      <img src="../gearbeast/company/qiwi.webp" alt="" />
+      <img src="../gearbeast/company/rese.webp" alt="" />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/sofort.webp"
+        src="../gearbeast/company/sofort.webp"
         alt=""
       />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/Visa-Logo.webp"
+        src="../gearbeast/company/Visa-Logo.webp"
         alt=""
       />
-      <img src="../-curly-hobbies-5555/gearbeast/company/visa.webp" alt="" />
+      <img src="../gearbeast/company/visa.webp" alt="" />
       <img
-        src="../-curly-hobbies-5555/gearbeast/company/webmoney.webp"
+        src="../gearbeast/company/webmoney.webp"
         alt=""
       />
-      <img src="../-curly-hobbies-5555/gearbeast/company/ww.webp" alt="" />
-      <img src="../-curly-hobbies-5555/gearbeast/company/ya.webp" alt="" />
+      <img src="../gearbeast/company/ww.webp" alt="" />
+      <img src="../gearbeast/company/ya.webp" alt="" />
       </div
     </div>
   </div>

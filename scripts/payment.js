@@ -15,7 +15,7 @@ paynow.addEventListener("click", function () {
     // p.innerText="Thanyou For your payment "
      h1.innerText="Transaction Completed Successfully ";
     setTimeout(function(){
-       // window.location.href="index.html";
+        window.location.href="index.html";
     },2000)
  div.append(img,h1);
  body.append(div);
@@ -31,3 +31,20 @@ setTimeout(function(){
 },1500)
   
 });
+
+let address=JSON.parse(localStorage.getItem("oder"));
+let grandtotal=JSON.parse(localStorage.getItem("grandtotal"));
+
+console.log(address);
+
+let tot1=document.getElementById("total1");
+tot1.innerText=grandtotal;
+
+let tot2=document.getElementById("total2");
+tot2.innerText=grandtotal;
+
+let addclass=document.getElementById("add2");
+addclass.innerText=address[0].address1;
+
+let addid=document.getElementById("add");
+addid.innerText=address[0].address1;

@@ -1,29 +1,31 @@
-let arr = [
-  {
-    Title: "title",
-    Image:
-      "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-    Price: 456,
-  },
-  {
-    Title: "title",
-    Image:
-      "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-    Price: 496,
-  },
-  {
-    Title: "title",
-    Image:
-      "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-    Price: 123,
-  },
-  {
-    Title: "title",
-    Image:
-      "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-    Price: 123,
-  },
-];
+// let arr = [
+//   {
+//     Title: "title",
+//     Image:
+//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
+//     Price: 456,
+//   },
+//   {
+//     Title: "title",
+//     Image:
+//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
+//     Price: 496,
+//   },
+//   {
+//     Title: "title",
+//     Image:
+//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
+//     Price: 123,
+//   },
+//   {
+//     Title: "title",
+//     Image:
+//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
+//     Price: 123,
+//   },
+// ];
+
+let arr=JSON.parse(localStorage.getItem("add_to_cart"));
 
 let Append = (data) => {
   let sub=0;
@@ -32,7 +34,7 @@ let Append = (data) => {
 
   data.forEach((elem,index) => {
     let unitQ = 1;
-    sub+=elem.Price;
+    sub+=elem.price;
     let VtableBody = document.createElement("div");
     VtableBody.setAttribute("id", "VtableBody");
 
@@ -40,17 +42,17 @@ let Append = (data) => {
     Bleft.setAttribute("class", "Bleft");
 
     let img = document.createElement("img");
-    img.src = elem.Image;
+    img.src = elem.img;
 
     let title = document.createElement("p");
-    title.innerText = elem.Title;
+    title.innerText = elem.title;
     Bleft.append(img, title);
 
     let Bright = document.createElement("div");
     Bright.setAttribute("class", "Bright");
 
     let unitP = document.createElement("p");
-    unitP.innerText = `$${elem.Price}`;
+    unitP.innerText = `$${elem.price}`;
     
     let quintity = document.createElement("div");
     quintity.setAttribute("id", "quntity");
@@ -66,8 +68,8 @@ let Append = (data) => {
         console.log(unitQ);
         input.value = unitQ;
         
-        totalP.innerText = `$${elem.Price * unitQ}`;
-        sub -= elem.Price;
+        totalP.innerText = `$${elem.price * unitQ}`;
+        sub -= elem.price;
         subtotal.innerText = `$${sub}`;
         Alltotal.innerText = `$${sub}`;
 
@@ -87,15 +89,15 @@ let Append = (data) => {
       
       console.log(unitQ);
       input.value = unitQ;
-      totalP.innerText = `$${elem.Price * unitQ}`;
-      sub +=elem.Price;
+      totalP.innerText = `$${elem.price * unitQ}`;
+      sub +=elem.price;
       subtotal.innerText = `$${sub}`;
       Alltotal.innerText = `$${sub}`;
       console.log("price2", sub);
     });
 
     let totalP = document.createElement("p");
-    totalP.innerText = `$${elem.Price * unitQ}`;
+    totalP.innerText = `$${elem.price * unitQ}`;
 
     let Dp = document.createElement("p");
     let button = document.createElement("button");
@@ -122,13 +124,18 @@ DeletProduct(index);
   
 
   function checkout(){
-    localStorage.setItem("subTotal",(sub));
+    localStorage.setItem("grandtotal",sub);
+    window.location.href="buynow.html"
   }
 };
+
 Append(arr);
 function DeletProduct(index){
   arr.splice(index,1);
-      
+      localStorage.setItem("add_to_cart",JSON.stringify(arr));
 Append(arr);
 }
 
+function home(){
+  window.location.href="index.html";
+}
