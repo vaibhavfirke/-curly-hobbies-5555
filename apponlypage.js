@@ -152,7 +152,12 @@ let append_data=()=>{
     contanier.innerHTML=null
     productData.forEach(el => {
 
-        let div =document.createElement("div")
+        let div =document.createElement("div");
+
+        div.onclick=()=>{
+            settoLC(el)
+        }
+
         div.setAttribute("class","psdiv")
         
 
@@ -194,6 +199,10 @@ let append_data=()=>{
 }
 
 append_data()
+
+let settoLC=(productData)=>{
+    localStorage.setItem("buyNow",JSON.stringify(productData));
+}
 
     let change_price=()=>{
          event.preventDefault()

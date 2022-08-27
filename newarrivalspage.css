@@ -1,13 +1,13 @@
 
 .psnewfortodaydiv{
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 200px;
 }
 .psnewfortoday{
     text-align: center;
     margin: auto;
-    border :1px solid black;
+    /* border :1px solid black; */
     text-align: center;
     font-size: 28px;
     font-family: OpenSanse,Arial, Helvetica, sans-serif; 
@@ -26,7 +26,6 @@
     margin-bottom: 16px;
     margin-left: 3px;
     font-family: OpenSanse,Arial, Helvetica, sans-serif; 
-    border: 1px solid red;
     margin-left: 160px;
 }
 
@@ -39,12 +38,12 @@
  width: 1190px;
  margin: auto;
  margin-top: 10px;
- border: 1px solid teal;
+ /* border: 1px solid teal; */
 }
 #psalldiv{
     width:1190px;
     height:80px;
-    border: 1px solid;
+    /* border: 1px solid; */
     margin: auto;
 }
 
@@ -100,7 +99,7 @@ img{
     width: 1190px;
     margin: auto;
     margin-top: 10px;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
 }
 
 #psanimationdiv img{
@@ -132,27 +131,32 @@ img{
     width: 20%;
     margin-top: -30px;
 }
-#animation{
-      border: 1px solid;
+
+#psalldiv{
+    display: flex;
+    justify-content: space-between;
+    
+
+   
 }
 
-
-button{
-    margin-top: -120px;
-    margin-left: 155px;
-    position:absolute;
-    font-size: 20px;
-    height: 50px;
-    /* z-index: -1; */
-    background-color: rgba(77, 77, 77, 0.5);
+.psall{
+    /* border: 1px solid; */
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+   
+    
 }
-
-button:nth-child(1){
-    /* position:absolute; */
-
-    left: -100px;
+.psall a:hover{
+font-weight: 700;
+color:#000
 }
-button:nth-child(2){
-    /* position:absolute; */
-    right: 163px;
-}
+.psall a{   
+    text-decoration: none;
+    font-family: OpenSanse,Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #666;
+  }
