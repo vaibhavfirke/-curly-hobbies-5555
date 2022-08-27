@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            font-family: OpenSanse,Arial, Helvetica, sans-serif;
+        }
         #selected_p {
             /* border: 2px solid black; */
             width: 80%;
@@ -25,7 +28,7 @@
             justify-content: center;
             align-items: center;
             align-content: center;
-            /* border: 2px solid red; */
+            border: 2px solid red;
 
         }
 
@@ -49,15 +52,9 @@
             color: #000;
         }
 
-        #selected_p>:last-child>p {
-            width: 95%;
-            line-height: 35px;
-            padding: 1%;
-            /* border: 2px solid black; */
-            font-size: 17px;
-        }
+       
 
-        #selected_p:first-child>img {
+        #selected_p>:first-child>img {
             width: 100%;
         }
 
@@ -72,8 +69,22 @@
             /* border: 2px solid black; */
             gap: 20px;
         }
-
-        #selected_p>:last-child>:nth-child(4)>button {
+     #selected_p>:last-child>:nth-child(2){
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+        gap: 10%;
+        /* padding: 1%; */
+     }
+      #selected_p>:last-child>:nth-child(2)>:first-child{
+            font-size: 17px;
+            /* padding: 1%; */
+      }
+     
+        #selected_p>:last-child>:nth-child(3)>button {
             border: 1px solid #ccc;
             
             font-size: 17px;
@@ -81,7 +92,7 @@
             padding: 1%;
         }
 
-        #selected_p>:last-child>:nth-child(5)>button {
+        #selected_p>:last-child>:nth-child(4)>button {
             border: 1px solid red;
             width: fit-content;
             height: fit-content;
@@ -110,17 +121,18 @@
 
         #desc_p {
             margin: auto;
+            margin-left: 10%;
             width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             align-content: center;
             /* border: 2px solid red; */
-            font-size: 50px;
             gap: 20px;
-            color:#b5beb5;
-            font-size: 14px;
+            color:#000000;
+            font-size: 17px;
+            line-height: 35px;
         }
 
         /* ---------------------------------------------------------------------------------- */
@@ -150,10 +162,11 @@
             //divdtl.style.width = "70%";
             let divbtns = document.createElement("div");
             let btnq = document.createElement("div");
-            let image = document.createElement("img");
-            let span = document.createElement('span');
+            let div_price = document.createElement('div');
+            let span = document.createElement('h2');
             span.innerText = ele.price;
             span.style.color = "#f3198e";
+            let image = document.createElement("img");
             let desc = document.createElement("p");
             let title = document.createElement("h2");
             let brand = document.createElement("p");
@@ -172,7 +185,7 @@
             addtocart.innerText = "add to cart";
             addtocart.style.background = "#f30240";
             addtocart.style.color = "white";
-            buynow.innerText = "but now";
+            buynow.innerText = "buy now";
             buynow.style.background = '#ffeff2';
             buynow.style.color = "red";
             increment.addEventListener('click', function () {
@@ -194,13 +207,13 @@
             title.innerText = ele.title;
             image.src = ele.image;
             desc.innerText = ele.desc;
-            quantity.innerText = ele.quantity;
+            // quantity.innerText = ele.quantity;
             price.innerText = `price: `;
-            price.append(span)
+            div_price.append(price,span);
             divimg.append(image);
             btnq.append(qty, decrement, quantity, increment)
             divbtns.append(addtocart, buynow)
-            divdtl.append(title, price, desc, btnq, divbtns)
+            divdtl.append(title,div_price, btnq, divbtns)
             container.append(divimg, divdtl);
         });
     }
@@ -213,7 +226,7 @@
         this.quantity = quantity;
         this.image = image;
     }
-    let obj = new porduct_obj("watch", 222, img, desc, 2);
+    let obj = new porduct_obj(desc, 222, img, desc, 2);
     arr.push(obj);
     console.log(arr);
 
@@ -224,6 +237,7 @@
             return element.image != ele.image;
         });
         otheranme = f;
+        otheranme.push(ele);
         otheranme.push(ele);
         localStorage.setItem("add_to_cart", JSON.stringify(otheranme));
         console.log(addtocart_items)
