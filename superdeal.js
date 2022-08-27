@@ -249,6 +249,7 @@ function appendproduct(product) {
     let Image = document.createElement("img");
 
     let title = document.createElement("h3");
+    title.style.fontWeight = "lighter";
     let price = document.createElement("h4");
     let RRP = document.createElement("p");
     let box = document.createElement("div");
@@ -284,7 +285,6 @@ function appendproduct(product) {
   });
 }
 appendproduct(product);
-
 function addtocartfunction(id) {
   for (let i = 0; i < cart_storage.length; i++) {
     if (cart_storage[i].id === id) {
@@ -293,18 +293,63 @@ function addtocartfunction(id) {
   }
   return true;
 }
-
+let label = document.createElement("label");
+label.innerText = "Sort By:";
+let superdeal_hottest = document.createElement("button");
+superdeal_hottest.innerText = "Hottest";
+let superdeal_newest = document.createElement("button");
+superdeal_newest.innerText = "Newest";
 let price_sort = document.createElement("button");
 price_sort.innerText = "price";
-document.getElementById("sort_filter").append(price_sort);
-price_sort.addEventListener("click", function () {
-  price_sortfun();
-  appendproduct(superdeals_data);
-});
+let superdeal_discount = document.createElement("button");
+superdeal_discount.innerText = "Discount";
+document
+  .getElementById("sort_filter")
+  .append(
+    label,
+    superdeal_hottest,
+    superdeal_newest,
+    price_sort,
+    superdeal_discount
+  );
+
+superdeals_data = JSON.parse(localStorage.getItem("superdeals_data"));
+price_sort.onclick = () => {
+  price_sortfun(superdeals_data);
+};
 
 let price_sortfun = (superdeals_data) => {
   console.log(superdeals_data);
   event.preventDefault();
+  superdeals_data = superdeals_data.sort((a, b) => {
+    return a.price - b.price;
+  });
+  appendproduct(superdeals_data);
+};
 
-  return superdeals_data.price - superdeals_data.price;
+superdeal_hottest.onclick = () => {
+  appendproduct(product);
+};
+superdeal_newest.onclick = () => {
+  superdeal_newestfun(superdeals_data);
+};
+
+superdeal_discount.onclick = () => {
+  super_discountfun(superdeals_data);
+};
+
+let superdeal_newestfun = (superdeals_data) => {
+  event.preventDefault();
+  superdeals_data = superdeals_data.sort((a, b) => {
+    return b.price - a.price;
+  });
+  appendproduct(superdeals_data);
+};
+
+let super_discountfun = (superdeals_data) => {
+  event.preventDefault();
+  superdeals_data = superdeals_data.sort((a, b) => {
+    return b.title.includes("Smart") - a.title.includes("Smart");
+  });
+  appendproduct(superdeals_data);
 };
