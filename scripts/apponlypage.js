@@ -8,6 +8,13 @@ import footer from "../component/footer.js";
 let foot= document.getElementById("newFooter");
 foot.innerHTML=footer(); 
 
+let logindata=JSON.parse(localStorage.getItem("loginORnot"));
+if(logindata==true){
+  let ID=document.getElementById("userH");
+let loginfo=JSON.parse(localStorage.getItem("login_info"));
+ID.innerText=loginfo.Email;
+}
+
 let productData=[
     {
     title: "Original Xiaomi MIJIA K Song Karaoke Microphone Bluetooth 5.1 Stereo Sound DSP Chip Noise Cancellation 2500mAh Handheld Microphones",

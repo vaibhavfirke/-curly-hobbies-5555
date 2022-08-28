@@ -7,6 +7,13 @@ superdealNavbar.innerHTML = navbar();
 let super_deals_footer = document.getElementById("super_deals_footer");
 super_deals_footer.innerHTML = footer();
 
+let logindata=JSON.parse(localStorage.getItem("loginORnot"));
+if(logindata==true){
+  let ID=document.getElementById("userH");
+let loginfo=JSON.parse(localStorage.getItem("login_info"));
+ID.innerText=loginfo.Email;
+}
+
 let product = [
   {
     img:

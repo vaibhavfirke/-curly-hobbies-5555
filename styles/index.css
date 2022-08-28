@@ -45,25 +45,28 @@ h1
 
 #mainInput
 {
+    padding-left: 10px;
     margin-left: 32%;
     width: 460px;
-    height: 30px;
-    border-radius: 12px;
+    height: 35px;
+    border-radius: 10px;
     margin-top: 40px;
-    border-color: yellow;
+    border: 1px solid #ffda00;
 }
 
 #searchlogo
 {
     color: black;
-    background-color: #FFDA00;
+    background-color: #ffda00;
     margin-top: 40px;
-    width: 25px;
+    height: 35px;
+    width: 45px;
+    border-radius: 0px 10px 10px 0px;
     margin-right: 20px;
-    padding-top: 5px;
-    padding-left: 5px;
-    border-radius: 10px;
-    margin-left: -28px;
+    padding-top: 8px;
+
+    padding-left: 10px;
+    margin-left: -40px;
 }
 
 #searchBox

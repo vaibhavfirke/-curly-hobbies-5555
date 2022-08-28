@@ -512,7 +512,12 @@ let dataofcs=[
       }, 
 ]
 
-
+let logindata=JSON.parse(localStorage.getItem("loginORnot"));
+if(logindata==true){
+  let ID=document.getElementById("userH");
+let loginfo=JSON.parse(localStorage.getItem("login_info"));
+ID.innerText=loginfo.Email;
+}
 
 function consumer(){
     event.preventDefault()
