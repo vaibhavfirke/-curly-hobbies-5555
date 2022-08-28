@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
     <div id="Vnavbar">
         <div class="left">
-            <img  onclick="home()" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
+            <img  id="home" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
         </div>
         <div class="right"></div>
     </div>
@@ -143,7 +144,9 @@
         <img src="data:image/png;base64,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"
             alt="">
     </div>
+
+    <div id="cartFooter"></div>
 </body>
 
 </html>
-<script src="./scripts/cart.js"></script>
+<script type="module" src="./scripts/cart.js"></script>

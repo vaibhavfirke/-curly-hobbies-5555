@@ -62,23 +62,27 @@ document.getElementById("VsigButton").addEventListener("click", function () {
     console.log("res", res);
     if (res) {
       alert("Login Successfull !");
+      let flage = true;
+      localStorage.setItem("loginORnot", flage);
+      window.location.href = "index.html";
     } else {
-      alert("Check Details");
+      alert("Check Details Again !");
     }
   }
 });
 
 function checkusernameAndpassword(email, pass) {
   let user2 = JSON.parse(localStorage.getItem("userinfo"));
-let temp=false;
+  let temp = false;
   user2.forEach((elem) => {
-    console.log("uesr", elem.Email,elem.Password);
-    console.log("info",email,pass)
+    console.log("uesr", elem.Email, elem.Password);
+    console.log("info", email, pass);
     if (elem.Email == email && elem.Password == pass) {
-      localStorage.setItem("login_info",JSON.stringify(elem));
-     temp=true;
-    
+      localStorage.setItem("login_info", JSON.stringify(elem));
+      temp = true;
     }
   });
   return temp;
 }
+let flage = false;
+localStorage.setItem("loginORnot", flage);

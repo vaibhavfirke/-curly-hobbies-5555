@@ -1,29 +1,12 @@
-// let arr = [
-//   {
-//     Title: "title",
-//     Image:
-//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-//     Price: 456,
-//   },
-//   {
-//     Title: "title",
-//     Image:
-//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-//     Price: 496,
-//   },
-//   {
-//     Title: "title",
-//     Image:
-//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-//     Price: 123,
-//   },
-//   {
-//     Title: "title",
-//     Image:
-//       "https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16467/goods_img-v1/05fb707d3870.jpg",
-//     Price: 123,
-//   },
-// ];
+
+
+
+import footer from "../component/footer.js";
+let foot= document.getElementById("cartFooter");
+foot.innerHTML=footer(); 
+
+
+document.getElementById("home").addEventListener("click",home);
 
 let arr=JSON.parse(localStorage.getItem("add_to_cart"));
 
@@ -31,8 +14,11 @@ let Append = (data) => {
   let sub=0;
   let contener = document.getElementById("Vcontener");
   contener.innerHTML = null;
-
+if(!data){
+  return ;
+}
   data.forEach((elem,index) => {
+    
     let unitQ = 1;
     sub+=elem.price;
     let VtableBody = document.createElement("div");
