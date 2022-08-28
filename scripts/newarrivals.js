@@ -407,7 +407,9 @@ let lightarray=[
       }, 
 ]
 
-
+document.getElementById("light").addEventListener("click",function(){
+  light();
+})
 
 function light(){
 
@@ -519,6 +521,9 @@ let loginfo=JSON.parse(localStorage.getItem("login_info"));
 ID.innerText=loginfo.Email;
 }
 
+document.getElementById("consumer").addEventListener("click",function(){
+  consumer();
+})
 function consumer(){
     event.preventDefault()
     let contanier=document.getElementById("psresultsdiv")
