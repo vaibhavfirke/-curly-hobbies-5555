@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        * {
+            font-family: OpenSanse, Arial, Helvetica, sans-serif;
+        }
+#buynav{
+    width: 100%;
+    height: 90px;
+    margin-bottom: 25px;
+    background-color: white;
+    border: 1px solid;
+}
+#buynav img{
+width: 20%;
+height:40px;
+margin-left: 5%;
+margin-top: 20px;
+object-fit: contain;
+}
+        #address_h {
+            /* border: 2px solid blue; */
+            margin: auto;
+            margin-left: 1%;
+            margin-top: 1%;
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            color: #000031;
+            font-size: 24px;
+        }
+
+        #detail_of_order {
+            margin: auto;
+            margin-left: 1%;
+            margin-top: 2%;
+            width: 50%;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            gap: 10px;
+        }
+
+        #form {
+            width: 100%;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+            color: #000000;
+        }
+
+        #form>span,
+        p {
+            width: 60%;
+        }
+
+        #form>p {
+            /* border: 2px solid gold; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            color: #171715;
+            font-size: 15px;
+        }
+
+        #form>span {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: #161617;
+            /* border:  2px solid red; */
+        }
+
+        #form>span>:first-child {
+            width: 25%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            /* border: 2px solid black; */
+            flex-wrap: wrap;
+            word-wrap: normal;
+            font-size: 17px;
+
+        }
+
+        #form>span>:last-child {
+            width: 360px;
+            /* color: blue; */
+            height: 40px;
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            word-wrap: normal;
+            color: #272427;
+            border: 1px solid rgb(153, 146, 146);
+
+        }
+
+        #form>button {
+            border: hidden;
+            background-color: gold;
+            color: black;
+            box-sizing: content-box;
+            font-size: larger;
+            text-align: center;
+            padding: 10px;
+width: 120px;
+margin-bottom: 25px;
+        }
+
+        ::placeholder {
+            text-align: center;
+            color: #766f76;
+            
+        }
+
+        /* #form>span>:last-child>:first-child{
+            height: 100%;
+            color: blue;
+          } */
+    </style>
+</head>
+
+<body style="background-color: #ffffff;">
+
+    <div id="buynav">
+        <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
+    </div>
+
+    <h1 id="address_h">Add New Add Address </h1>
+    <div id="detail_of_order">
+        <form id="form">
+            <span>
+                <p>First Name:</p><input id="fname" type="text" >
+            </span>
+            <span>
+
+                <p>Last Name : </p> <input id="lname" type="text" >
+            </span>
+            <span>
+
+                <p> Address line 1:</p> <input id="line1" type="text"
+                    placeholder="Street Address, Flat, Unit, Building,Floor,etc.">
+            </span>
+            <p>Note:please write your address in english</p>
+            <span>
+
+                <p> Address line 2:</p> <input id="line2"  type="text">
+            </span>
+            <p>Note:please write your address in english</p>
+            <span>
+                <p> State?Region :</p> <select id="state">
+                    <option disabled>State</option>
+                    <option value="mp">Madhya Pradesh</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="up">Uttar pradesh</option>
+                    <option value="mh">Maharashtra</option>
+                    <option value="uk">Uttrakhand</option>
+                    <option value="rj">Bihar</option>
+                    <option value="rj">Assam</option>
+                </select>
+            </span>
+            <span>
+
+                <p>City: </p> <input id="city" type="text">
+            </span>
+            <span>
+
+                <p> Zip / Postal Code</p> <input id="zip" type="number" >
+            </span>
+            <span>
+                <p>Phone Number: </p> <input id="number" type="tel" >
+
+            </span>
+            <span>
+
+                <p> E-mail Address:</p> <input id="email" type="email" >
+            </span>
+            <div style="display: flex;width:210px;justify-content:space-between;">
+
+                <input name="abc" id="check" type="checkbox"></input>
+                <label for="abc" style="color:rgb(146, 141, 141) ;"> Set As My Default Address</label>
+            </div>
+            <!-- <input  id="submit" type="submit"></input> -->
+            <button id="submit">Submit</button>
+
+
+        </form>
+    </div>
+
+    <div id="buynowFooter"></div>
+</body>
+
+</html>
+<script type="module">
+
+    import footer from "../component/footer.js";
+    let foot = document.getElementById("buynowFooter");
+    foot.innerHTML = footer();
+
+    let user_oder_detail = JSON.parse(localStorage.getItem("oder")) || [];
+    document.getElementById("form").addEventListener("submit", sumbitform);
+    function sumbitform(event) {
+        event.preventDefault();
+        let form = document.getElementById('form');
+        let fname = form.fname.value;
+        let lname = form.lname.value;
+        let address1 = form.line1.value;
+        let address2 = form.line2.value;
+        let state = form.state.value;
+        let city = form.city.value;
+        let zipcode = form.zip.value;
+        let number = form.number.value;
+        let email = form.email.value;
+        let check = form.check.value;
+
+        let address = new Address(fname, lname, address1, address2, state, city, zipcode, number, email, check);
+        console.log(address)
+        // user_oder_detail.push(address);
+        let abc = [];
+        abc.push(address)
+        localStorage.setItem("oder", JSON.stringify(abc));
+        console.log(user_oder_detail)
+        window.location.href = "checkout.html";
+
+
+    }
+
+    class Address {
+        constructor(fname, lname, address1, address2, state, city, zipcode, number, email, check) {
+            this.fname = fname;
+            this.lname = lname;
+            this.address1 = address1;
+            this.address2 = address2;
+            this.state = state;
+            this.city = city;
+            this.zipcode = zipcode;
+            this.number = number;
+            this.email = email;
+            this.check = check;
+        }
+    }
+    console.log(user_oder_detail);
+</script>
