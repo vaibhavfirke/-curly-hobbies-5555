@@ -220,9 +220,11 @@ append_data()
 let settoLC=(productData)=>{
     localStorage.setItem("buyNow",JSON.stringify(productData));
 }
-
+document.getElementById("changeprice").addEventListener("click",function(){
+  change_price();
+})
     let change_price=()=>{
-         event.preventDefault()
+         event.preventDefault();
 
         dataLS=productData.sort((a,b)=>{
             return a.price-b.price
@@ -233,7 +235,9 @@ let settoLC=(productData)=>{
    
 
   
-
+    document.getElementById("Newest").addEventListener("click",function(){
+      newestitem();
+    })
 
 
     let newestitem=()=>{
@@ -246,7 +250,9 @@ let settoLC=(productData)=>{
     }
 
 
-
+    document.getElementById("Discount").addEventListener("click",function(){
+      discountitem();
+    })
     let discountitem=()=>{
         event.preventDefault()
             dataLS=productData.sort((a,b)=>{
