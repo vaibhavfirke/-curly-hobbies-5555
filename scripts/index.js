@@ -9,6 +9,13 @@ import footer from "../component/footer.js";
 let foot= document.getElementById("HomeFooter");
 foot.innerHTML=footer(); 
 
+let arr=JSON.parse(localStorage.getItem("add_to_cart"));
+if(arr){
+
+  let CART=document.getElementById("CART");
+  CART.innerText=arr.length;
+}
+
 const swiper = new Swiper('.swiper', {
      
     autoplay:

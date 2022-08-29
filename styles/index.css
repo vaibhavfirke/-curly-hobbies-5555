@@ -1,12 +1,10 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.headlogo img
-{
+.headlogo img {
     width: 230px;
     height: 50px;
     position: absolute;
@@ -15,27 +13,29 @@
 
 }
 
-a
-{
+a {
     text-decoration: none;
 }
-h1
-{
+
+h1 {
     font-size: 2em;
     font-weight: bold;
-    font-family: Arial,Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-#navbar, #navbarLine
-{
+.navbar{
+    background-color: white;
+    padding-bottom: 15px;
+}
+#navbar,
+#navbarLine {
     display: flex;
     margin-left: 46%;
     gap: 20px;
-
+    background-color: white;
+    
 }
 
-#navbarLine p
-{
+#navbarLine p {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: #666666;
@@ -43,8 +43,7 @@ h1
 
 
 
-#mainInput
-{
+#mainInput {
     padding-left: 10px;
     margin-left: 32%;
     width: 460px;
@@ -54,8 +53,7 @@ h1
     border: 1px solid #ffda00;
 }
 
-#searchlogo
-{
+#searchlogo {
     color: black;
     background-color: #ffda00;
     margin-top: 40px;
@@ -69,113 +67,99 @@ h1
     margin-left: -40px;
 }
 
-#searchBox
-{
+#searchBox {
     display: flex;
 }
 
-#searchBox a:hover, #searchBox h4:hover
-{
+#searchBox a:hover,
+#searchBox h4:hover {
     color: #dacdcd;
 }
 
 
 
-#user
-{
+#user {
     margin-left: 30px;
     margin-top: 22px;
 }
 
-#searchBox a
-{
+#searchBox a {
     display: flex;
 }
 
-#favorites
-{
+#favorites {
     margin-left: 50px;
     margin-top: 22px;
 }
 
-#cart
-{
+#cart {
     margin-left: 50px;
     margin-top: 22px;
 }
 
 
-#userH
-{
+#userH {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 4px;
     color: #666666;
     margin-top: 25px;
 }
 
-#userF
-{
+#userF {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 4px;
     color: #666666;
     margin-top: 25px;
 }
 
-#userC
-{
+#userC {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 4px;
     color: #666666;
     margin-top: 25px;
 }
 
-#banner
-{
+#banner {
     width: 1190px;
     height: auto;
-    margin-top: 40px; 
+    margin-top: 40px;
     margin-left: 75px;
 }
 
-#bannerA 
-{
+#bannerA {
     display: flex;
-   
-    
+
+
 }
 
-.head2
-{
+.head2 {
     margin-left: 100px;
 }
 
-.head1
-{
+.head1 {
     font-size: 20px;
-    font-family: 'OpenSans',Arial, Helvetica, sans-serif;
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
     background-color: #000000;
     color: #FFFFFF;
     width: 200px;
     height: 40px;
     text-align: center;
     padding-top: 10px;
-    
+
 }
 
-#bannerA2 h3
-{
+#bannerA2 h3 {
     font-size: 16px;
     color: #000000;
     font-family: 'OpenSans', Arial, Helvetica, sans-serif;
     padding-top: 10px;
 }
 
-#bannerA2
-{
+#bannerA2 {
     display: flex;
     gap: 100px;
     margin-top: 0px;
-    background-color: yellow ;
+    background-color: yellow;
     width: 100%;
     height: 40px;
     text-align: center;
@@ -183,86 +167,76 @@ h1
     color: #666666;
 }
 
-#bannerA2 h3:hover
-{
+#bannerA2 h3:hover {
     /* text-decoration: underline; */
     border-bottom: 3px solid black;
 }
 
-#bannerIMG
-{
+#bannerIMG {
     width: 950px;
     margin-left: 250px;
     margin-top: 0px;
 }
 
-#sidebar
-{
+#sidebar {
     height: 420px;
     width: 190px;
-    background:#fff9f9d9;
+    background: #fff9f9d9;
     padding: 10px 0px 0px;
 
 }
 
-#sidebar p
-{
+#sidebar p {
     font-size: 16px;
     font-family: "OpenSans", Arial, Helvetica, sans-serif;
     color: #666666;
     padding-left: 5px;
 }
 
-#sidebar p:hover
-{
+#sidebar p:hover {
     background-color: #e4e0e0;
 }
 
 
-  /* Banner CSS ****** */
+/* Banner CSS ****** */
 
-  .container
-  {
+.container {
     margin: auto;
-      width: 1190px;
-      height: 100%;
-      
-      display: flex;
-     
+    width: 1190px;
+    height: 100%;
 
-  }
+    display: flex;
 
-  .swiper
-  {
-      width: 83.5%;
-      height: fit-content;
 
-  }
+}
 
-  .swiper-slide img
-  {
-      width: 100%;
-      height: 420px;
-     
-  }
+.swiper {
+    width: 83.5%;
+    height: fit-content;
 
-  .swiper .swiper-button-prev, .swiper .swiper-button-next
-  {
-      color: antiquewhite;
-  }
+}
 
-  .swiper .swiper-pagination-bullet-active
-  {
-      background-color: #FFFFFF;
-  }
+.swiper-slide img {
+    width: 100%;
+    height: 420px;
+
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: antiquewhite;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background-color: #FFFFFF;
+}
 
 
 
 
-  /*  Banner CSS Ends   *******/
+/*  Banner CSS Ends   *******/
 
-.photos
-{
+.photos {
     display: flex;
     margin-top: 60px;
     width: 1190px;
@@ -273,50 +247,46 @@ h1
 
 }
 
-.photosTITLE:hover
-{
+.photosTITLE:hover {
     color: rgb(250, 186, 68);
     cursor: pointer;
 }
 
-#superdeals div, #collection div, .photos img
-{
+#superdeals div,
+#collection div,
+.photos img {
     transition: .4s ease-out;
 }
 
-#superdeals div:hover, #collection div:hover, .photos img:hover
-{
+#superdeals div:hover,
+#collection div:hover,
+.photos img:hover {
     transform: translateY(15px);
     cursor: pointer;
 }
 
 
-.photos>div
-{
-   display: flex;
-}
-
-#icon 
-{
+.photos>div {
     display: flex;
 }
 
-#fafa
-{
+#icon {
+    display: flex;
+}
+
+#fafa {
     margin-left: 60px;
     margin-top: 30px;
 }
 
-#iconh1
-{
+#iconh1 {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 10px;
     margin-top: 30px;
 }
 
-#collection
-{
+#collection {
     display: flex;
     margin-top: 15px;
     width: 1190px;
@@ -326,39 +296,34 @@ h1
 
 }
 
-#collection>div
-{
+#collection>div {
     text-align: center;
     border: 1px solid rgb(252, 233, 233);
 }
 
-#collection div:hover
-{
+#collection div:hover {
     border-color: #dacdcd;
-    
+
 }
 
-.cIMG, .sIMG
-{
-     width: 240px;
+.cIMG,
+.sIMG {
+    width: 240px;
 }
 
-.ssIMG
-{
-    width: 280px ;
+.ssIMG {
+    width: 280px;
 }
 
-.HP
-{
-    background-color: #000000B3 ;
+.HP {
+    background-color: #000000B3;
     height: 100px;
     color: #FFFFFF;
 }
 
-#superdeals
-{
+#superdeals {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     margin-top: 25px;
     width: 90%;
     height: 365px;
@@ -368,141 +333,135 @@ h1
 
 }
 
-#superdeals div:hover
-{
+#superdeals div:hover {
     animation: backwards;
 }
 
-#SP
-{
+#SP {
     text-decoration: line-through;
 }
 
-#Sprice
-{
+#Sprice {
     color: red;
 }
 
-#flashsale
-{
+#flashsale {
     background-color: #FFEDF1;
     color: #F30240;
 }
 
-#superdeals>div
-{
+#superdeals>div {
     text-align: center;
     border: 1px solid rgb(223, 228, 228);
 }
 
 
 
-#collection p
-{
-    font-family: Arial,Helvetica,sans-serif;
+#collection p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#superdeals p
-{
-    font-family: Arial,Helvetica,sans-serif;
+#superdeals p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-.popularSearches
-{
+.popularSearches {
     margin-top: 50px;
     margin-left: 60px;
     display: flex;
-   
+
 }
 
-.popularSearches>div
-{
+.popularSearches>div {
     gap: 20px;
     display: flex;
 }
 
-.popularSearches p
-{
+.popularSearches p {
     font-size: 14px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #000000;
     text-decoration: none;
-    
+
 
 }
 
-.popularSearches p:hover
-{
+.popularSearches p:hover {
     color: rgb(33, 95, 95);
     cursor: pointer;
 }
 
 
-   /* Appended Products CSS */
+/* Appended Products CSS */
 
 
-   #AllGearBestProducts
-   {
-       display: grid;
-       grid-template-columns: repeat(5, 1fr);
-       width: 1190px;
-       margin-left: 40px;
-       gap: 8px;
-   }
+#AllGearBestProducts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 1190px;
+    margin-left: 40px;
+    gap: 8px;
+}
 
-   
 
-   .SIMG
-   {
-       width: 250px;
-       height: 240px;
-   }
 
-   #AllGearBestProducts div
-   {
-       border: 1px solid #eeeeee;
-       margin-top: 20px;
-       height: 380px;
-   }
+.SIMG {
+    width: 250px;
+    height: 240px;
+}
 
-   #AllGearBestProducts p
-   {
-       font-family: "OpenSans", Arial, Helvetica, sans-serif;
-   }
+#AllGearBestProducts div {
+    border: 1px solid #eeeeee;
+    margin-top: 20px;
+    height: 380px;
+}
 
-   #Flashsale
-   {
-       background-color: #FFEDF1;
-       color: #F30240;
-   }
+#AllGearBestProducts p {
+    font-family: "OpenSans", Arial, Helvetica, sans-serif;
+}
 
-   .PhotosTITLE
-   {
-       font-family:  'Courier New', Courier, monospace
-   }
+#Flashsale {
+    background-color: #FFEDF1;
+    color: #F30240;
+}
 
-   .PhotosTITLE:hover
-   {  
-      color: rgb(250, 186, 68);
-      cursor: pointer;
-      
-   }
+.PhotosTITLE {
+    font-family: 'Courier New', Courier, monospace
+}
 
-   #AllGearBestProducts div
-   {
-       transition: .4s ease-out;
-   }
+.PhotosTITLE:hover {
+    color: rgb(250, 186, 68);
+    cursor: pointer;
 
-   #AllGearBestProducts div:hover
-   {
-      transform: translateY(15px);
-      cursor: pointer;
-   }
+}
 
-   #Pprice
-   {
-       color: red;
-       font-size: 20px;
-       font-family: "OpenSans", Arial, Helvetica, sans-serif;
-   }
+#AllGearBestProducts div {
+    transition: .4s ease-out;
+}
+
+#AllGearBestProducts div:hover {
+    transform: translateY(15px);
+    cursor: pointer;
+}
+
+#Pprice {
+    color: red;
+    font-size: 20px;
+    font-family: "OpenSans", Arial, Helvetica, sans-serif;
+}
+
+
+#CART{
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    bottom: -8px;
+    left: -4px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}

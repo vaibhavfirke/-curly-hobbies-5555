@@ -158,7 +158,7 @@ margin-bottom: 25px;
 <body style="background-color: #ffffff;">
 
     <div id="buynav">
-        <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
+        <img id="buyHOME" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="">
     </div>
 
     <h1 id="address_h">Add New Add Address </h1>
@@ -275,4 +275,8 @@ margin-bottom: 25px;
         }
     }
     console.log(user_oder_detail);
+
+    document.getElementById("buyHOME").addEventListener("click",function(){
+        window.location.href="index.html";
+    })
 </script>

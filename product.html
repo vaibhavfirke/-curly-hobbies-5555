@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8963c5ea10.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
     <style>
         * {
             font-family: OpenSanse, Arial, Helvetica, sans-serif;
@@ -30,7 +34,7 @@
             justify-content: center;
             align-items: center;
             align-content: center;
-            border: 2px solid red;
+            border: 2px solid rgb(228, 228, 228);
 
         }
 
@@ -114,13 +118,14 @@
         /* } */
         #desc_btn {
             margin: auto;
-            margin-left: 10%;
+            margin-left: 11%;
             box-sizing: content-box;
             font-size: 20px;
             background-color: yellow;
             color: #292600;
             border: hidden;
             padding: 10px;
+            margin-bottom: 15px;
         }
 
         #desc_p {
@@ -139,11 +144,18 @@
             line-height: 35px;
         }
 
+        #Cnavbar {
+            background-color: white;
+            margin-bottom: 10px;
+        }
+
         /* ---------------------------------------------------------------------------------- */
     </style>
 </head>
 
 <body style="background-color: #fff;">
+
+    <div id="Cnavbar"></div>
 
     <div id="selected_p"></div>
     <button id="desc_btn">show detail</button>
@@ -155,9 +167,22 @@
 
 </html>
 <script type="module">
+
+    import navbar from "../component/navbar.js";
+    let nav = document.getElementById("Cnavbar");
+    nav.innerHTML = navbar();
+
     import footer from "../component/footer.js";
     let foot = document.getElementById("buyFooter");
     foot.innerHTML = footer();
+
+    let logindata = JSON.parse(localStorage.getItem("loginORnot"));
+    if (logindata == true) {
+        let ID = document.getElementById("userH");
+        let loginfo = JSON.parse(localStorage.getItem("login_info"));
+        ID.innerText = loginfo.Email;
+
+    }
 
     let arr = JSON.parse(localStorage.getItem("buyNow")) || [];
 
@@ -180,7 +205,7 @@
         let btnq = document.createElement("div");
         let div_price = document.createElement('div');
         let span = document.createElement('h2');
-        span.innerText =`  ${ele.price}`;
+        span.innerText = `  ${ele.price}`;
         span.style.color = "#f3198e";
         let image = document.createElement("img");
         let desc = document.createElement("p");
@@ -204,8 +229,8 @@
         buynow.innerText = "buy now";
         buynow.style.background = '#ffeff2';
         buynow.style.color = "red";
-        quantity.innerText =1;
-        let que=1;
+        quantity.innerText = 1;
+        let que = 1;
         increment.addEventListener('click', function () {
             que++;
             quantity.innerText = que;
@@ -213,17 +238,17 @@
         })
         decrement.addEventListener('click', function () {
             quantity.innerText = ele.quantity;
-            if (que <=1) {
-                que=1;
+            if (que <= 1) {
+                que = 1;
                 quantity.innerText = que;
-            }else{
+            } else {
 
                 que--;
                 quantity.innerText = que;
             }
 
         })
-        ele.quantity=que;
+        ele.quantity = que;
         addtocart.addEventListener('click', function () {
 
             addtocartfun(ele);
@@ -257,6 +282,13 @@
     // arr.push(obj);
     // console.log(arr);
 
+    let ARR  = JSON.parse(localStorage.getItem("add_to_cart"));
+    if(ARR){
+
+        let CART = document.getElementById("CART");
+        CART.innerText = ARR.length;
+    }
+
     append_p(arr, selected_p);
 
     function addtocartfun(ele) {
@@ -270,7 +302,9 @@
 
         localStorage.setItem("add_to_cart", JSON.stringify(otheranme));
         alert("Item Added To Cart");
-
+        let ARR= JSON.parse(localStorage.getItem("add_to_cart"));
+        let CART = document.getElementById("CART");
+        CART.innerText = ARR.length;
 
     }
     function show_detail(array, container) {

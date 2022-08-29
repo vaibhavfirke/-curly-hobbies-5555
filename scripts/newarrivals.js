@@ -6,6 +6,13 @@ import footer from "../component/footer.js";
 let foot= document.getElementById("newarivalFoote");
 foot.innerHTML=footer(); 
 
+let arr=JSON.parse(localStorage.getItem("add_to_cart"));
+if(arr){
+
+  let CART=document.getElementById("CART");
+  CART.innerText=arr.length;
+}
+
 let Arrayofanimataion=[
     {
         title: "Tablet G18 GPS 8000mAh Google Play 8GB 128GB WIFI 10.1Inch Android 12 Laptop 48MP Deca Core 5G Pad Global Version PC",

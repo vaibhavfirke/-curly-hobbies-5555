@@ -30,6 +30,7 @@ let navbar=()=>{
    
    <a href="cart.html">
       <i class="fa fa-shopping-cart" id="cart" style="font-size:20px"></i><h4 id="userC">Cart</h4>
+      <div id="CART">0</div>
    </a>
 
 </div>
