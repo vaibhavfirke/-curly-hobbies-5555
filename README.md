@@ -2,11 +2,13 @@
 
 <image src="https://user-images.githubusercontent.com/101393796/208239834-c0034cee-791b-406b-9244-d0116a11f6dc.jpg" alt="" />
 
-## This is a group Project made with a team of 3 members.
+## This is a group Project made with a team of 5 members.
 
 <image src="https://avatars.githubusercontent.com/u/105922806?v=4" alt="" width="60px" />
 <image src="https://avatars.githubusercontent.com/u/106039415?v=4" alt="" width="60px" />
 <image src="https://avatars.githubusercontent.com/u/101393796?v=4" alt="" width="60px" />
+@hemant Kumar
+@chandan Pandey
 
 GearBest is an E-commerce shopping web site where you can buy  any kind of products at affordable prices. 
 
